@@ -5,6 +5,9 @@ import "./App.css";
 import NavBar from "./components/Navbar";
 import LandingPageComp from "./components/LandingPageComp";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import MenuPage from "./pages/MenuPage";
+
 
 function App() {
   return (
@@ -13,10 +16,13 @@ function App() {
         <>
           <NavBar />
         </>
-        <Routes></Routes>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/menupage" element={<MenuPage />} />
+        </Routes>
       </Router>
 
-      <LandingPageComp />
+      {/* <LandingPageComp /> */}
     </>
   );
 }
