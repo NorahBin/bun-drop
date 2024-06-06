@@ -1,0 +1,126 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "title": "Classic Burger",
+      "price": 8.99,
+      "description": "A classic beef burger with lettuce, tomato, and cheese.",
+      "category": "burgers",
+      "image": "/src/images/buger1.png"
+    },
+    {
+      "id": 2,
+      "title": "Sweet Potato Fries",
+      "price": 4.99,
+      "description": "Crispy sweet potato fries topped with fresh parsley.",
+      "category": "sides",
+      "image": "/src/images/fries.png"
+    },
+    {
+      "id": 3,
+      "title": "Soda",
+      "price": 1.99,
+      "description": "A refreshing carbonated drink available in various flavors.",
+      "category": "drinks",
+      "image": "/src/images/drink1.png"
+    },
+    {
+      "id": 4,
+      "title": "Cheeseburger",
+      "price": 9.99,
+      "description": "A juicy beef burger with melted cheese, lettuce, and tomato.",
+      "category": "burgers",
+      "image": "/location/of/image/4.png"
+    },
+    {
+      "id": 5,
+      "title": "Onion Rings",
+      "price": 3.99,
+      "description": "Crispy golden onion rings served with dipping sauce.",
+      "category": "sides",
+      "image": "/location/of/image/5.png"
+    },
+    {
+      "id": 6,
+      "title": "Iced Tea",
+      "price": 2.49,
+      "description": "Refreshing iced tea available in lemon and peach flavors.",
+      "category": "drinks",
+      "image": "/location/of/image/6.png"
+    }
+  ],
+  "mostPopular": [
+    {
+      "id": 7,
+      "title": "Classic Burger",
+      "price": 8.99,
+      "description": "A classic beef burger with lettuce, tomato, and cheese.",
+      "category": "burgers",
+      "image": "/src/images/buger1.png"
+    },
+    {
+      "id": 8,
+      "title": "Sweet Potato Fries",
+      "price": 4.99,
+      "description": "Crispy sweet potato fries topped with fresh parsley.",
+      "category": "sides",
+      "image": "/src/images/fries.png"
+    },
+    {
+      "id": 9,
+      "title": "Soda",
+      "price": 1.99,
+      "description": "A refreshing carbonated drink available in various flavors.",
+      "category": "drinks",
+      "image": "/src/images/drink1.png"
+    },
+    {
+      "id": 10,
+      "title": "Icecream",
+      "price": 8.99,
+      "description": "Delicious icecream with sprincles",
+      "category": "desserts",
+      "image": "/src/images/icecream.png"
+    },
+    {
+      "id": 11,
+      "title": "Bacon burger",
+      "price": 8.99,
+      "description": "Baconburger with pickles and cheese",
+      "category": "burgers",
+      "image": "/src/images/baconburger.png"
+    },
+    {
+      "id": 12,
+      "title": "Smoothe",
+      "price": 8.99,
+      "description": "Kiwismoothie",
+      "category": "desserts",
+      "image": "/src/images/smoothie.png"
+    },
+    {
+      "id": 13,
+      "title": "Sallad Burger",
+      "price": 8.99,
+      "description": "No bread only sallad",
+      "category": "burgers",
+      "image": "/src/images/salladburger.png"
+    },
+    {
+      "id": 14,
+      "title": "Vanilla Shake",
+      "price": 8.99,
+      "description": "Worlds best vanilla milkshake",
+      "category": "desserts",
+      "image": "/src/images/vanillashake.png"
+    },
+    {
+      "id": 15,
+      "title": "Passion fruit drink",
+      "price": 8.99,
+      "description": "Refreshing passionfruit drink",
+      "category": "drinks",
+      "image": "/src/images/passionfruitdrink.png"
+    }
+  ]
+}
