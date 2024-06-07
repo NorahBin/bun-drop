@@ -6,7 +6,9 @@ function NavBar() {
   return (
     <>
       <div className="navbar">
-        <img src={bundrop} alt="Logo" className="navbar-logo" />
+        <NavLink to="/">
+          <img src={bundrop} alt="Logo" className="navbar-logo" />
+        </NavLink>
         <div className="flexbox navbar-text">
           <NavLink to="/menupage">
             <h2 className="menu-text"> MENU</h2>

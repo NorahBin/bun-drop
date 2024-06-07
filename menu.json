@@ -30,7 +30,7 @@
       "price": 9.99,
       "description": "A juicy beef burger with melted cheese, lettuce, and tomato.",
       "category": "burgers",
-      "image": "/location/of/image/4.png"
+      "image": "/src/images/cheeseburger.png"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "price": 3.99,
       "description": "Crispy golden onion rings served with dipping sauce.",
       "category": "sides",
-      "image": "/location/of/image/5.png"
+      "image": "/src/images/onionrings.png"
     },
     {
       "id": 6,
@@ -46,7 +46,15 @@
       "price": 2.49,
       "description": "Refreshing iced tea available in lemon and peach flavors.",
       "category": "drinks",
-      "image": "/location/of/image/6.png"
+      "image": "/src/images/passionfruitdrink.png"
+    },
+    {
+      "id": 16,
+      "title": "Icecream",
+      "price": 8.99,
+      "description": "Delicious icecream with sprincles",
+      "category": "desserts",
+      "image": "/src/images/icecream.png"
     }
   ],
   "mostPopular": [
@@ -56,7 +64,7 @@
       "price": 8.99,
       "description": "A classic beef burger with lettuce, tomato, and cheese.",
       "category": "burgers",
-      "image": "/src/images/buger1.png"
+      "image": "/src/images/baconburger.png"
     },
     {
       "id": 8,

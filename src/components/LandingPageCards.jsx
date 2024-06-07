@@ -29,31 +29,3 @@ function LandingPageCards({ startIndex }) {
 export default LandingPageCards;
 
 
-// function LandingPageCards({ startIndex }) {
-//   const [menuItems, setMenuItems] = useState([]);
-
-//   useEffect(() => {
-//     // Slice the items based on the startIndex and display the next three items
-//     const endIndex = Math.min(startIndex + 3, menuData.mostPopular.length);
-//     setMenuItems(menuData.mostPopular.slice(startIndex, endIndex));
-//   }, [startIndex]);
-
-//   return (
-//     <>
-//       <div className="card-container">
-        
-//         {menuItems.map((item) => (
-//           <div className="card" key={item.id}>
-//             <img src={item.image} alt={item.title} className="burger-pic" />
-//             <h1 className="card-text">{item.title}</h1>
-//             <div className="red-line"></div>
-//             <p>{item.description}</p>
-//           </div>
-//         ))}
-//       </div>
-//     </>
-//   );
-// }
-
-// export default LandingPageCards;
-
