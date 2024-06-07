@@ -333,3 +333,35 @@ body {
 .yellow-active{
   color: #fff797;
 }
+
+.order-container{
+  display: flex;
+  justify-content: center;
+
+  margin-top: 60px;
+}
+
+.order-title{
+  text-align: center;
+  margin-top: 30px;
+  font-size: 50px;
+  font-family: "Black Han Sans";
+}
+
+.order-box{
+  width: 800px;
+  height: 500px;
+    border: #29c1db solid 5px;
+    background-color: white;
+        border-radius: 10px;
+
+
+}
+
+
+.red-line-orders{
+  margin-left: 330px;
+  background-color: #d31d21;
+  height: 3px;
+  width: 130px;
+}

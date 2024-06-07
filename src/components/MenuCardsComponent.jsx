@@ -4,6 +4,10 @@ import React, { useState, useEffect } from "react";
 
 function MenuCardsComponent() {
   const [menuItems, setMenuItems] = useState([]);
+  
+
+
+
 
   useEffect(() => {
     fetch("http://localhost:3000/menu")
@@ -13,6 +17,10 @@ function MenuCardsComponent() {
   }, []);
 
   return (
+
+    
+
+    
     <div className="menu-card-container">
       {menuItems.map((item, index) => (
         <div key={index} className="menu-card">
