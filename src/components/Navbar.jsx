@@ -14,7 +14,9 @@ function NavBar() {
             <h2 className="menu-text"> MENU</h2>
           </NavLink>
           {/* <h2 className="menu-text"> MENU</h2> */}
-          <h2 className="cart-text"> CART</h2>
+          <NavLink to="/cartpage">
+            <h2 className="cart-text"> CART</h2>
+          </NavLink>
           <h2 className="cart-text"> ABOUT US</h2>
         </div>
         <button className="sign-in">Sign In</button>

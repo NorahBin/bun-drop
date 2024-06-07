@@ -7,6 +7,7 @@ import LandingPageComp from "./components/LandingPageComp";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import MenuPage from "./pages/MenuPage";
+import CartPage from "./pages/CartPage";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/menupage" element={<MenuPage />} />
+          <Route path="/cartpage" element={<CartPage />} />
         </Routes>
       </Router>
 
