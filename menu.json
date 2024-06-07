@@ -6,7 +6,8 @@
       "price": 8.99,
       "description": "A classic beef burger with lettuce, tomato, and cheese.",
       "category": "burgers",
-      "image": "/src/images/buger1.png"
+      "image": "/src/images/buger1.png",
+      "quantity": 1
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "price": 4.99,
       "description": "Crispy sweet potato fries topped with fresh parsley.",
       "category": "sides",
-      "image": "/src/images/fries.png"
+      "image": "/src/images/fries.png",
+      "quantity": 1
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "price": 1.99,
       "description": "A refreshing carbonated drink available in various flavors.",
       "category": "drinks",
-      "image": "/src/images/drink1.png"
+      "image": "/src/images/drink1.png",
+      "quantity": 1
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "price": 9.99,
       "description": "A juicy beef burger with melted cheese, lettuce, and tomato.",
       "category": "burgers",
-      "image": "/src/images/cheeseburger.png"
+      "image": "/src/images/cheeseburger.png",
+      "quantity": 1
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "price": 3.99,
       "description": "Crispy golden onion rings served with dipping sauce.",
       "category": "sides",
-      "image": "/src/images/onionrings.png"
+      "image": "/src/images/onionrings.png",
+      "quantity": 1
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "price": 2.49,
       "description": "Refreshing iced tea available in lemon and peach flavors.",
       "category": "drinks",
-      "image": "/src/images/passionfruitdrink.png"
+      "image": "/src/images/passionfruitdrink.png",
+      "quantity": 1
     },
     {
       "id": 16,
@@ -54,7 +60,8 @@
       "price": 8.99,
       "description": "Delicious icecream with sprincles",
       "category": "desserts",
-      "image": "/src/images/icecream.png"
+      "image": "/src/images/icecream.png",
+      "quantity": 1
     }
   ],
   "mostPopular": [
@@ -64,7 +71,8 @@
       "price": 8.99,
       "description": "A classic beef burger with lettuce, tomato, and cheese.",
       "category": "burgers",
-      "image": "/src/images/baconburger.png"
+      "image": "/src/images/baconburger.png",
+      "quantity": 1
     },
     {
       "id": 8,
@@ -72,7 +80,8 @@
       "price": 4.99,
       "description": "Crispy sweet potato fries topped with fresh parsley.",
       "category": "sides",
-      "image": "/src/images/fries.png"
+      "image": "/src/images/fries.png",
+      "quantity": 1
     },
     {
       "id": 9,
@@ -80,7 +89,8 @@
       "price": 1.99,
       "description": "A refreshing carbonated drink available in various flavors.",
       "category": "drinks",
-      "image": "/src/images/drink1.png"
+      "image": "/src/images/drink1.png",
+      "quantity": 1
     },
     {
       "id": 10,
@@ -88,7 +98,8 @@
       "price": 8.99,
       "description": "Delicious icecream with sprincles",
       "category": "desserts",
-      "image": "/src/images/icecream.png"
+      "image": "/src/images/icecream.png",
+      "quantity": 1
     },
     {
       "id": 11,
@@ -96,7 +107,8 @@
       "price": 8.99,
       "description": "Baconburger with pickles and cheese",
       "category": "burgers",
-      "image": "/src/images/baconburger.png"
+      "image": "/src/images/baconburger.png",
+      "quantity": 1
     },
     {
       "id": 12,
@@ -104,7 +116,8 @@
       "price": 8.99,
       "description": "Kiwismoothie",
       "category": "desserts",
-      "image": "/src/images/smoothie.png"
+      "image": "/src/images/smoothie.png",
+      "quantity": 1
     },
     {
       "id": 13,
@@ -112,7 +125,8 @@
       "price": 8.99,
       "description": "No bread only sallad",
       "category": "burgers",
-      "image": "/src/images/salladburger.png"
+      "image": "/src/images/salladburger.png",
+      "quantity": 1
     },
     {
       "id": 14,
@@ -120,7 +134,8 @@
       "price": 8.99,
       "description": "Worlds best vanilla milkshake",
       "category": "desserts",
-      "image": "/src/images/vanillashake.png"
+      "image": "/src/images/vanillashake.png",
+      "quantity": 1
     },
     {
       "id": 15,
@@ -128,7 +143,8 @@
       "price": 8.99,
       "description": "Refreshing passionfruit drink",
       "category": "drinks",
-      "image": "/src/images/passionfruitdrink.png"
+      "image": "/src/images/passionfruitdrink.png",
+      "quantity": 1
     }
   ]
 }
