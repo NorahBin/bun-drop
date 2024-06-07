@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { GiHamburger } from "react-icons/gi";
 import { RiDrinks2Fill } from "react-icons/ri";
@@ -7,16 +8,18 @@ import { IoIosIceCream } from "react-icons/io";
 function MenuComponent() {
   const [menuItems, setMenuItems] = useState([]);
   const [filter, setFilter] = useState("all");
+  const [activeButton, setActiveButton] = useState("all");
 
   useEffect(() => {
-    fetch("http://localhost:3000/menu") 
+    fetch("http://localhost:3000/menu")
       .then((response) => response.json())
       .then((data) => setMenuItems(data))
       .catch((error) => console.error("Error:", error));
   }, []);
 
-  const handleFilterClick = (filter) => {
+  const handleFilterClick = (filter, button) => {
     setFilter(filter);
+    setActiveButton(button);
   };
 
   const filteredItems = menuItems.filter((item) => {
@@ -30,16 +33,20 @@ function MenuComponent() {
         <div className="red-menu">
           <div className="menu-text-container">
             <button
-              className="all-text all-button"
-              onClick={() => handleFilterClick("all")}
+              className={`all-text all-button ${
+                activeButton === "all" ? "yellow-active" : ""
+              }`}
+              onClick={() => handleFilterClick("all", "all")}
             >
               All
             </button>
             <span className="white-line"></span>
 
             <button
-              className="burger-text all-button"
-              onClick={() => handleFilterClick("burgers")}
+              className={`burger-text all-button ${
+                activeButton === "burgers" ? "yellow-active" : ""
+              }`}
+              onClick={() => handleFilterClick("burgers", "burgers")}
             >
               Burgers
               <GiHamburger className="hamburger-icon" />
@@ -47,8 +54,10 @@ function MenuComponent() {
             <span className="white-line"></span>
 
             <button
-              className="all-button"
-              onClick={() => handleFilterClick("sides")}
+              className={`all-button ${
+                activeButton === "sides" ? "yellow-active" : ""
+              }`}
+              onClick={() => handleFilterClick("sides", "sides")}
             >
               Sides
               <GiFrenchFries className="sides-icon" />
@@ -56,8 +65,10 @@ function MenuComponent() {
             <span className="white-line"></span>
 
             <button
-              className="all-button"
-              onClick={() => handleFilterClick("drinks")}
+              className={`all-button ${
+                activeButton === "drinks" ? "yellow-active" : ""
+              }`}
+              onClick={() => handleFilterClick("drinks", "drinks")}
             >
               Drinks
               <RiDrinks2Fill className="drink-icon" />
@@ -65,8 +76,10 @@ function MenuComponent() {
             <span className="white-line"></span>
 
             <button
-              className="all-button"
-              onClick={() => handleFilterClick("desserts")}
+              className={`all-button ${
+                activeButton === "desserts" ? "yellow-active" : ""
+              }`}
+              onClick={() => handleFilterClick("desserts", "desserts")}
             >
               Desserts
               <IoIosIceCream className="dessert-icon" />
@@ -81,7 +94,7 @@ function MenuComponent() {
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
                 <p>{item.price}</p>
-                <button className="sign-in order-button">Order</button>
+                <button className="sign-in order-button ">Order</button>
               </div>
             ))}
           </div>
@@ -92,4 +105,5 @@ function MenuComponent() {
 }
 
 export default MenuComponent;
+
 
