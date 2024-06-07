@@ -235,7 +235,7 @@ body {
 }
 
 .menu-text-container {
-  margin-top: 25px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   /* justify-content: space-around; */
@@ -243,6 +243,19 @@ body {
   font-family: "Black Han Sans";
 
   /* justify-content: space-around; */
+}
+
+.all-button{
+  font-family: "Black Han Sans";
+  font-size: 35px;
+  color: white;
+  background-color: #d31d21;
+  border: none;
+    margin-right: 20px;
+
+}
+.yellow-text {
+  color: #fff797;
 }
 
 .red-menu {
@@ -259,19 +272,18 @@ body {
   background-color: white;
   margin-right: 50px;
   border-radius: 10px;
-  margin-top: -8px;
+  margin-top: 5px;
 }
 
 .hamburger-icon {
   font-size: 45px;
   margin-right: 20px;
-  margin-top: -8px;
+  margin-left: 15px;
 }
 
 .sides-icon {
   font-size: 45px;
   margin-right: 20px;
-  margin-top: -8px;
 }
 .dessert-icon {
   font-size: 60px;
@@ -282,8 +294,39 @@ body {
 .drink-icon {
   font-size: 45px;
   margin-right: 20px;
-  margin-top: -8px;
 }
 .menu-text-container h1 {
   margin-right: 20px; /* Adjust this value to add space between h1 elements and white lines */
 }
+
+.menu-card-container{
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 34px;
+  padding: 10px;
+  gap: 20px;
+
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 50vh;
+  width: 60vh;
+  background-color: white;
+  border: #29c1db solid 5px;
+}
+
+
+
+.order-button{
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+
+
