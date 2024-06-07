@@ -365,3 +365,83 @@ body {
   height: 3px;
   width: 130px;
 }
+
+.order-item-container{
+  padding-left: 80px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+
+  
+}
+
+
+.order-name{
+  margin-right: 160px;
+}
+
+.grey-line{
+  background-color: grey;
+  height: 2px;
+}
+
+
+.quantity-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  border-radius: 3px;
+}
+
+.quantity-input:focus {
+  background: red;
+}
+
+.quantity-input__modifier,
+.quantity-input__screen {
+  user-select: none;
+  outline: none;
+}
+
+.quantity-input__modifier {
+  padding: 0.2rem; /* Further reduced padding */
+  width: 1.5rem; /* Further reduced width */
+  font-size: 0.8rem; /* Further reduced font size */
+  background: #f3f3f3;
+  color: #888;
+  border: 0 solid #dbdbdb;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+  cursor: pointer;
+}
+
+.quantity-input__modifier:hover {
+  background: #dbdbdb;
+  color: #666;
+}
+
+.quantity-input__modifier--left {
+  border-radius: 3px 0 0 3px;
+}
+
+.quantity-input__modifier--right {
+  border-radius: 0 3px 3px 0;
+}
+
+.quantity-input__screen {
+  width: 2.5rem; /* Further reduced width */
+  padding: 0.2rem; /* Further reduced padding */
+  font-size: 0.8rem; /* Further reduced font size */
+  border: 0;
+  border-top: 0 solid #dbdbdb;
+  border-bottom: 0 solid #dbdbdb;
+  text-align: center;
+}
+
+.grey-line{
+  background-color: #666;
+  height: 2px;
+  width: 2px;
+}
