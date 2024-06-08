@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import MenuPage from "./pages/MenuPage";
 import CartPage from "./pages/CartPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/menupage" element={<MenuPage />} />
           <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/checkoutpage" element={<CheckoutPage />} />
         </Routes>
       </Router>
 

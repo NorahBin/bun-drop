@@ -1,5 +1,7 @@
+
 import React, { useState, useEffect } from "react";
-import QuantityComponent from "./QuantityComponent";
+import PayButtonComp from "./PayButtonComp";
+import { useNavigate } from "react-router-dom";
 
 function CartComponent() {
   // Retrieve items from local storage
@@ -13,6 +15,9 @@ function CartComponent() {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
+  // Navigate to checkout page
+  const navigate = useNavigate();
+
   // Function to handle quantity change
   const handleQuantityChange = (index, newQuantity) => {
     const updatedCartItems = cartItems.map((item, i) =>
@@ -21,13 +26,18 @@ function CartComponent() {
     setCartItems(updatedCartItems);
   };
 
+  // Function to handle pay button click
+  const handlePayButtonClick = () => {
+    // Navigate to checkout page
+    navigate("/checkoutpage");
+  };
 
-//Kalkylerar total price:
+  //Kalkylerar total price:
   const totalPrice = cartItems
     .reduce((total, item) => {
       return total + item.price * item.quantity;
     }, 0)
-    .toFixed(2);;
+    .toFixed(2);
 
   return (
     <>
@@ -54,7 +64,12 @@ function CartComponent() {
               <p>{item.price * item.quantity}</p>
             </div>
           ))}
-          <div>Total Price: {totalPrice}</div>
+          <div className="total-price-container">
+            <div className="total-price-title">Total Price:</div>
+            <div className="price">{totalPrice}</div>
+            <PayButtonComp onClick={handlePayButtonClick} />
+            {/* <button className="pay-button">Pay</button> */}
+          </div>
         </div>
       </div>
     </>
