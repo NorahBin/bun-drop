@@ -9,6 +9,8 @@ import LandingPage from "./pages/LandingPage";
 import MenuPage from "./pages/MenuPage";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import ConformationPage from "./pages/ConformationPage";
+import SignUpPage from "./pages/SignUpPage";
 
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/menupage" element={<MenuPage />} />
           <Route path="/cartpage" element={<CartPage />} />
           <Route path="/checkoutpage" element={<CheckoutPage />} />
+          <Route path="/conformationpage" element={<ConformationPage />} />
+          <Route path="/signuppage" element={<SignUpPage />} />
         </Routes>
       </Router>
 

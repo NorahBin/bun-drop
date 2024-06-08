@@ -1,6 +1,5 @@
 import bundrop from "../images/bundrop.png";
-import {NavLink} from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
@@ -11,17 +10,21 @@ function NavBar() {
         </NavLink>
         <div className="flexbox navbar-text">
           <NavLink to="/menupage">
-            <h2 className="menu-text"> MENU</h2>
+            <h2 className="menu-text">MENU</h2>
           </NavLink>
-          {/* <h2 className="menu-text"> MENU</h2> */}
           <NavLink to="/cartpage">
-            <h2 className="cart-text"> CART</h2>
+            <h2 className="cart-text">CART</h2>
           </NavLink>
-          <h2 className="cart-text"> ABOUT US</h2>
+          <h2 className="cart-text">ABOUT US</h2>
         </div>
-        <button className="sign-in">Sign In</button>
+        <NavLink to="/signinpage">
+          <button className="sign-in">Sign In</button>
+        </NavLink>
+        <NavLink to="/signuppage">
+          <button className="sign-in">Sign up</button>
+        </NavLink>
       </div>
-      <div className="navbar-underline"></div> {/* Add this line */}
+      <div className="navbar-underline"></div>
     </>
   );
 }
