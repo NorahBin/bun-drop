@@ -64,7 +64,13 @@
       "quantity": 1
     }
   ],
-  "users": [],
+  "users": [
+    {
+      "id": "01f4",
+      "name": "user",
+      "password": "password"
+    }
+  ],
   "mostPopular": [
     {
       "id": 7,

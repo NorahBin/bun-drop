@@ -56,11 +56,14 @@ function CheckoutComponent() {
         <div className="total-price-container">
           <div className="total-price-title">Total:</div>
           <div className="price">{totalPrice}</div>
+          
         </div>
 
         <div className="checkout-pay-container">
           <PaymentComponent />
         </div>
+
+        
       </div>
     </div>
   );

@@ -107,6 +107,28 @@ body {
   margin-top: 20px;
 }
 
+.conformation-container {
+  min-height: 50vh;
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.conformation-box {
+  margin-top: 30px;
+  width: 700px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: white;
+  border: #29c1db solid 5px;
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -512,7 +534,6 @@ body {
 
 .checkout-items-container {
   width: 800px;
-  height: 500px;
   border: #29c1db solid 5px;
   background-color: white;
   border-radius: 10px;
@@ -528,7 +549,7 @@ body {
 
 .checkout-pay-box{
   
-  height: 180px;
+  /* height: 180px; */
   width: 510px;
     border: lightgrey solid 3px;
     border-radius: 10px;
@@ -566,3 +587,4 @@ body {
   display: flex;
   flex-direction: column;
 }
+
