@@ -21,7 +21,6 @@ function MenuComponent() {
     setActiveButton(button);
   };
 
-
   const addToCart = (item) => {
     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
     cartItems.push(item);
@@ -116,7 +115,6 @@ function MenuComponent() {
 }
 
 export default MenuComponent;
-
 
 //Orginal
 // import React, { useState, useEffect } from "react";
