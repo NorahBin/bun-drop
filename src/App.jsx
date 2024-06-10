@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -14,28 +12,37 @@ import CheckoutPage from "./pages/CheckoutPage";
 import ConformationPage from "./pages/ConformationPage";
 import SignUpPage from "./pages/SignUpPage";
 import SignInPage from "./pages/SignInPage";
+import FavoritePage from "./pages/FavoritePage";
 
 function App() {
+
+//Variabel för att hålla koll på signed-in user
+  const [user, setUser] = useState(null);
+
   return (
     <>
       <Router>
         <>
-          <NavBar />
+          {/* //Passar username som en prop till navbar */}
+          <NavBar user={user} setUser={setUser} />
         </>
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/menupage" element={<MenuPage />} />
           <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/favoritepage" element={<FavoritePage />} />
           <Route path="/checkoutpage" element={<CheckoutPage />} />
           <Route path="/conformationpage" element={<ConformationPage />} />
           <Route path="/signuppage" element={<SignUpPage />} />
-          <Route path="/signinpage" element={<SignInPage />} />
+          <Route
+            path="/signinpage"
+            element={<SignInPage setUser={setUser} />}
+          />
         </Routes>
       </Router>
-
-      {/* <LandingPageComp /> */}
     </>
   );
 }
 
 export default App;
+
