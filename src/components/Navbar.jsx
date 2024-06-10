@@ -1,9 +1,17 @@
 
-
+import React from "react";
 import bundrop from "../images/bundrop.png";
 import { NavLink } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ user, setUser }) {
+  const handleSignOut = () => {
+    // Set user to null to signify sign-out
+    setUser(null);
+  };
+
+  let buttonText = user ? "Sign Out" : "Sign In";
+  let buttonAction = user ? handleSignOut : null;
+
   return (
     <>
       <div className="navbar">
@@ -17,13 +25,17 @@ function NavBar() {
           <NavLink to="/cartpage">
             <h2 className="cart-text">CART</h2>
           </NavLink>
+          {user && (
+            <NavLink to="/favoritepage">
+              <h2 className="favorites-text">FAVORITES</h2>
+            </NavLink>
+          )}
           <h2 className="cart-text">ABOUT US</h2>
         </div>
-        <NavLink to="/signinpage">
-          <button className="sign-in">Sign In</button>
-        </NavLink>
-        <NavLink to="/signuppage">
-          <button className="sign-in">Sign up</button>
+        <NavLink to={user ? "/" : "/signinpage"}>
+          <button className="sign-in" onClick={buttonAction}>
+            {buttonText}
+          </button>
         </NavLink>
       </div>
       <div className="navbar-underline"></div>
@@ -32,4 +44,5 @@ function NavBar() {
 }
 
 export default NavBar;
+
 
