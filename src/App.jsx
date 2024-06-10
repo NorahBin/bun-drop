@@ -15,8 +15,7 @@ import SignInPage from "./pages/SignInPage";
 import FavoritePage from "./pages/FavoritePage";
 
 function App() {
-
-//Variabel för att hålla koll på signed-in user
+  //Variabel för att hålla koll på signed-in user
   const [user, setUser] = useState(null);
 
   return (
@@ -28,7 +27,8 @@ function App() {
         </>
         <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/menupage" element={<MenuPage />} />
+          <Route path="/menupage" element={<MenuPage user={user} />} />
+
           <Route path="/cartpage" element={<CartPage />} />
           <Route path="/favoritepage" element={<FavoritePage />} />
           <Route path="/checkoutpage" element={<CheckoutPage />} />

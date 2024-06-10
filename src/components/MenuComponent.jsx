@@ -4,7 +4,7 @@ import { RiDrinks2Fill } from "react-icons/ri";
 import { GiFrenchFries } from "react-icons/gi";
 import { IoIosIceCream } from "react-icons/io";
 
-function MenuComponent() {
+function MenuComponent({user}) {
   const [menuItems, setMenuItems] = useState([]);
   const [filter, setFilter] = useState("all");
   const [activeButton, setActiveButton] = useState("all");
@@ -15,6 +15,13 @@ function MenuComponent() {
       .then((data) => setMenuItems(data))
       .catch((error) => console.error("Error:", error));
   }, []);
+
+  // Add this function inside your MenuComponent
+  const addToFavorites = (item) => {
+    let favoriteItems = JSON.parse(localStorage.getItem("favorites")) || [];
+    favoriteItems.push(item);
+    localStorage.setItem("favorites", JSON.stringify(favoriteItems));
+  };
 
   const handleFilterClick = (filter, button) => {
     setFilter(filter);
@@ -103,11 +110,17 @@ function MenuComponent() {
                   className="sign-in order-button"
                   onClick={() => addToCart(item)}
                 >
-                  
                   Order
                 </button>
 
-                <button className="sign-in order-button">Add to favorites</button>
+                {user && (
+                  <button onClick={() => addToFavorites(item)}>
+                    Add to favorites
+                  </button>
+                )}
+                {/* <button className="sign-in order-button">
+                  Add to favorites
+                </button> */}
               </div>
             ))}
           </div>
@@ -118,5 +131,4 @@ function MenuComponent() {
 }
 
 export default MenuComponent;
-
 

@@ -1,14 +1,8 @@
-import React from "react";
 import MenuComponent from "../components/MenuComponent";
-import MenuCardsComponent from "../components/MenuCardsComponent";
 
-function MenuPage() {
-    return (
-      <>
-        <MenuComponent />
-        {/* <MenuCardsComponent /> */}
-      </>
-    );
+function MenuPage({ user }) {
+  return <MenuComponent user={user} />;
 }
 
 export default MenuPage;
+
