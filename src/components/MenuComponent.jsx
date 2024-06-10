@@ -1,3 +1,8 @@
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import { GiHamburger } from "react-icons/gi";
 import { RiDrinks2Fill } from "react-icons/ri";
@@ -16,12 +21,22 @@ function MenuComponent({user}) {
       .catch((error) => console.error("Error:", error));
   }, []);
 
-  // Add this function inside your MenuComponent
+
   const addToFavorites = (item) => {
-    let favoriteItems = JSON.parse(localStorage.getItem("favorites")) || [];
-    favoriteItems.push(item);
-    localStorage.setItem("favorites", JSON.stringify(favoriteItems));
+    const userId = user.id;
+
+    let favorites = JSON.parse(localStorage.getItem("favorites")) || {};
+
+    if (!favorites[userId]) {
+      favorites[userId] = [];
+    }
+
+    favorites[userId].push(item);
+
+    localStorage.setItem("favorites", JSON.stringify(favorites));
   };
+
+
 
   const handleFilterClick = (filter, button) => {
     setFilter(filter);

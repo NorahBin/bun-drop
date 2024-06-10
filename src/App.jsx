@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
@@ -18,6 +20,7 @@ function App() {
   //Variabel för att hålla koll på signed-in user
   const [user, setUser] = useState(null);
 
+
   return (
     <>
       <Router>
@@ -30,7 +33,10 @@ function App() {
           <Route path="/menupage" element={<MenuPage user={user} />} />
 
           <Route path="/cartpage" element={<CartPage />} />
-          <Route path="/favoritepage" element={<FavoritePage />} />
+          {/* <Route path="/favoritepage" element={<FavoritePage />} /> */}
+
+          <Route path="/favoritepage" element={<FavoritePage user={user} />} />
+
           <Route path="/checkoutpage" element={<CheckoutPage />} />
           <Route path="/conformationpage" element={<ConformationPage />} />
           <Route path="/signuppage" element={<SignUpPage />} />
