@@ -110,24 +110,28 @@ body {
 .conformation-container {
   min-height: 50vh;
   display: flex;
-  margin-top: 100px;
+  margin-top: 20px;
   justify-content: center;
   align-items: center;
 }
 
 .conformation-box {
-  margin-top: 30px;
   width: 700px;
   min-height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border-radius: 10px;
   background-color: white;
   border: #29c1db solid 5px;
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
+
+.order-conformation-title{
+  text-align: center;
+  margin-top: 20px;
+}
+
+
 
 .card-container {
   display: flex;
