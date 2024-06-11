@@ -8,7 +8,6 @@ function PaymentComponent() {
   // State for managing the visibility of Card inputs
   const [showCardInputs, setShowCardInputs] = useState(false);
 
-
   // Function to toggle visibility of Swish inputs
   const toggleSwishInputs = () => {
     setShowSwishInputs(!showSwishInputs);
@@ -21,58 +20,59 @@ function PaymentComponent() {
     // You can add any additional logic here
   };
 
-const handlePayment = () => {
-  // // Retrieve input values
-  // const cardNumber = document.getElementById("cardNumber").value;
-  // const expiryDate = document.getElementById("expiryDate").value;
-  // const cvv = document.getElementById("cvv").value;
-  // const cardHolderName = document.getElementById("cardHolderName").value;
+  const handlePayment = () => {
+    // // Retrieve input values
+    // const cardNumber = document.getElementById("cardNumber").value;
+    // const expiryDate = document.getElementById("expiryDate").value;
+    // const cvv = document.getElementById("cvv").value;
+    // const cardHolderName = document.getElementById("cardHolderName").value;
 
-  // // Define regex patterns for validation
-  // const cardNumberPattern = /^[0-9]{16}$/; // 16 digits
-  // const expiryDatePattern = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/; // MM/YY format
-  // const cvvPattern = /^[0-9]{3}$/; // 3 digits
-  // const namePattern = /^[a-zA-Z\s]*$/; // Letters and spaces
+    // // Define regex patterns for validation
+    // const cardNumberPattern = /^[0-9]{16}$/; // 16 digits
+    // const expiryDatePattern = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/; // MM/YY format
+    // const cvvPattern = /^[0-9]{3}$/; // 3 digits
+    // const namePattern = /^[a-zA-Z\s]*$/; // Letters and spaces
 
-  // // Validate inputs
-  // if (!cardNumberPattern.test(cardNumber)) {
-  //   alert("Invalid card number. It must be 16 digits.");
-  //   return;
-  // }
-  // if (!expiryDatePattern.test(expiryDate)) {
-  //   alert("Invalid expiry date. Use MM/YY format.");
-  //   return;
-  // }
-  // if (!cvvPattern.test(cvv)) {
-  //   alert("Invalid CVV. It must be 3 digits.");
-  //   return;
-  // }
-  // if (!namePattern.test(cardHolderName)) {
-  //   alert("Invalid cardholder name. Only letters and spaces are allowed.");
-  //   return;
-  // }
+    // // Validate inputs
+    // if (!cardNumberPattern.test(cardNumber)) {
+    //   alert("Invalid card number. It must be 16 digits.");
+    //   return;
+    // }
+    // if (!expiryDatePattern.test(expiryDate)) {
+    //   alert("Invalid expiry date. Use MM/YY format.");
+    //   return;
+    // }
+    // if (!cvvPattern.test(cvv)) {
+    //   alert("Invalid CVV. It must be 3 digits.");
+    //   return;
+    // }
+    // if (!namePattern.test(cardHolderName)) {
+    //   alert("Invalid cardholder name. Only letters and spaces are allowed.");
+    //   return;
+    // }
 
-  // If all validations pass, navigate to the confirmation page
-  navigate("/conformationpage");
-};
-
+    // If all validations pass, navigate to the confirmation page
+    navigate("/conformationpage");
+  };
 
   const navigate = useNavigate(); // Initialize useNavigate hook
 
   return (
     <div className="checkout-pay-container">
+      <h1>Payment</h1>
+
       <div className="checkout-pay-box">
-        <h1>Payment</h1>
-
-        <button
-          className="checkout-circle-button"
-          onClick={toggleSwishInputs}
-        ></button>
-        <input
-          type="text"
-          style={{ display: showSwishInputs ? "block" : "none" }}
-        />
-
+        <div className="swish-container">
+          <button
+            className="checkout-circle-button"
+            onClick={toggleSwishInputs}
+          ></button>
+          <input
+            type="text"
+            style={{ display: showSwishInputs ? "block" : "none" }}
+          />
+          <h2 className="swish-text">Swish</h2>
+        </div>
         <div className="checkout-grey-line"></div>
 
         <h2>Card</h2>
@@ -86,11 +86,7 @@ const handlePayment = () => {
             <div className="input-container">
               <h3>Card number:</h3>
 
-              <input
-                type="text"
-                placeholder="Card Number"
-                id="cardNumber" 
-              />
+              <input type="text" placeholder="Card Number" id="cardNumber" />
 
               <h3>Expiry date:</h3>
 
@@ -102,7 +98,11 @@ const handlePayment = () => {
 
               <h3>Card holder name:</h3>
 
-              <input id="cardHolderName" type="text" placeholder="Cardholder Name" />
+              <input
+                id="cardHolderName"
+                type="text"
+                placeholder="Cardholder Name"
+              />
               <button onClick={handlePayment}>Pay</button>
             </div>
           </div>
@@ -113,4 +113,3 @@ const handlePayment = () => {
 }
 
 export default PaymentComponent;
-
