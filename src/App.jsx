@@ -37,7 +37,10 @@ function App() {
           <Route path="/favoritepage" element={<FavoritePage user={user} />} />
 
           <Route path="/checkoutpage" element={<CheckoutPage user={user} />} />
-          <Route path="/conformationpage" element={<ConformationPage />} />
+          <Route
+            path="/conformationpage"
+            element={<ConformationPage user={user} />}
+          />
           <Route path="/signuppage" element={<SignUpPage />} />
           <Route
             path="/signinpage"
