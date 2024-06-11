@@ -24,7 +24,6 @@ function MenuCardsComponent() {
     <div className="menu-card-container">
       {menuItems.map((item, index) => (
         <div key={index} className="menu-card">
-          {/* Display your item properties here */}
           <img src={item.image} alt={item.title} className="burger-pic" />
           <h2>{item.name}</h2>
           <p>{item.description}</p>

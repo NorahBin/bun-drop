@@ -1,15 +1,12 @@
 
 
-
-
-
 import React, { useState, useEffect } from "react";
 import { GiHamburger } from "react-icons/gi";
 import { RiDrinks2Fill } from "react-icons/ri";
 import { GiFrenchFries } from "react-icons/gi";
 import { IoIosIceCream } from "react-icons/io";
 
-function MenuComponent({user}) {
+function MenuComponent({ user }) {
   const [menuItems, setMenuItems] = useState([]);
   const [filter, setFilter] = useState("all");
   const [activeButton, setActiveButton] = useState("all");
@@ -21,19 +18,26 @@ function MenuComponent({user}) {
       .catch((error) => console.error("Error:", error));
   }, []);
 
-
   const addToFavorites = (item) => {
     const userId = user.id;
-
     let favorites = JSON.parse(localStorage.getItem("favorites")) || {};
 
     if (!favorites[userId]) {
       favorites[userId] = [];
     }
 
-    favorites[userId].push(item);
+    // Check if the item is already in the favorites
+    const isItemInFavorites = favorites[userId].some(
+      (favoriteItem) => favoriteItem.id === item.id
+    );
 
-    localStorage.setItem("favorites", JSON.stringify(favorites));
+    if (!isItemInFavorites) {
+      favorites[userId].push(item);
+      localStorage.setItem("favorites", JSON.stringify(favorites));
+    } else {
+      // Optionally, alert the user that the item is already in favorites
+      console.log("Item is already in favorites");
+    }
   };
 
 
@@ -43,11 +47,38 @@ function MenuComponent({user}) {
     setActiveButton(button);
   };
 
-  const addToCart = (item) => {
-    let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
-    cartItems.push(item);
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-  };
+
+
+const addToCart = (item) => {
+  // Kollar om det finns en signed in user
+  const userId = user?.id;
+
+  // Hämtar carts från lokal storage, annats initialisera en ny. 
+  let carts = JSON.parse(localStorage.getItem("carts")) || {};
+
+  // Bestäm cart key baserat på user id eller om det är temp user
+  const cartKey = userId || "tempUser";
+
+  // Hämtar users cars eller temporary cart 
+  let userCart = carts[cartKey] || [];
+
+  // Kollar om itemet redan finns i carten
+  const existingItemIndex = userCart.findIndex(
+    (cartItem) => cartItem.id === item.id
+  );
+
+  if (existingItemIndex > -1) {
+    // Om det finns en, öka kvantiteten
+    userCart[existingItemIndex].quantity += 1;
+  } else {
+    // Annats lägg till varan
+    userCart.push({ ...item, quantity: 1 });
+  }
+
+  // Uppdaterar carts objektet med det nya user carts 
+  carts[cartKey] = userCart;
+  localStorage.setItem("carts", JSON.stringify(carts));
+};
 
   const filteredItems = menuItems.filter((item) => {
     if (filter === "all") return true;
@@ -133,9 +164,7 @@ function MenuComponent({user}) {
                     Add to favorites
                   </button>
                 )}
-                {/* <button className="sign-in order-button">
-                  Add to favorites
-                </button> */}
+             
               </div>
             ))}
           </div>
@@ -146,4 +175,3 @@ function MenuComponent({user}) {
 }
 
 export default MenuComponent;
-

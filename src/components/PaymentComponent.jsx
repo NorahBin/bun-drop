@@ -89,7 +89,7 @@ const handlePayment = () => {
               <input
                 type="text"
                 placeholder="Card Number"
-                id="cardNumber" // Add an id to the input for accessing it later
+                id="cardNumber" 
               />
 
               <h3>Expiry date:</h3>

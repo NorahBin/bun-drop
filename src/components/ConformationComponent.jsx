@@ -4,11 +4,10 @@ import { useNavigate } from "react-router-dom";
 
 import { useState, useEffect } from "react";
 function ConformationComponent() {
-
-  // Retrieve items from local storage
+  //Hämta items från local storage
   const initialCartItems = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // State to hold cart items and their quantities
+  // State för att hålla kundvagnsartiklar och deras kvantiteter  const [cartItems, setCartItems] = useState(initialCartItems);
   const [cartItems, setCartItems] = useState(initialCartItems);
 
   // Effect to sync cart items with local storage
@@ -16,10 +15,10 @@ function ConformationComponent() {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // Navigate to checkout page
+  // Navigation
   const navigate = useNavigate();
 
-  // Function to handle quantity change
+  // Function för quantity change
   const handleQuantityChange = (index, newQuantity) => {
     const updatedCartItems = cartItems.map((item, i) =>
       i === index ? { ...item, quantity: newQuantity } : item
@@ -41,7 +40,6 @@ function ConformationComponent() {
 
           {cartItems.map((item, index) => (
             <div key={index}>
-                
               {item.name} x{item.quantity}
               {item.name} {item.title}
               {item.name} {item.title}
