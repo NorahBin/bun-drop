@@ -8,7 +8,7 @@ import stripes from "../images/stripes.png";
 
 function LandingPageComponent() {
   const [startIndex, setStartIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(1); // Initialize activeIndex to 1
+  const [activeIndex, setActiveIndex] = useState(1); // Sätter start index till 1
 
   const totalItems = menuData.mostPopular.length;
   const itemsPerPage = 3;
@@ -39,14 +39,14 @@ function LandingPageComponent() {
         <button
           className="arrow left-arrow previous-button"
           onClick={handlePreviousClick}
-          disabled={startIndex === 0} // Disable the button if at the start
+          disabled={startIndex === 0} // Disable knappen om den är i början av slide showen
         >
           <TbArrowBigLeftFilled className="arrow-icon" />
         </button>
         <button
           className="arrow right-arrow next-button"
           onClick={handleNextClick}
-          disabled={startIndex + itemsPerPage >= totalItems} // Disable the button if at the end
+          disabled={startIndex + itemsPerPage >= totalItems} // Disable knappen om den är i slutet av slide showen
         >
           <TbArrowBigRightFilled className="arrow-icon" />
         </button>

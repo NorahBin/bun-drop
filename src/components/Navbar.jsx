@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar({ user, setUser }) {
   const handleSignOut = () => {
-    // Set user to null to signify sign-out
+    // Sätter user till null för att logga ut
     setUser(null);
   };
 

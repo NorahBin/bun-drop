@@ -1,24 +1,36 @@
 
+
+
 import React, { useState, useEffect } from "react";
 import PayButtonComp from "./PayButtonComp";
 import { useNavigate } from "react-router-dom";
 
-function CartComponent() {
-  // Retrieve items from local storage
-  const initialCartItems = JSON.parse(localStorage.getItem("cart")) || [];
+function CartComponent({ user }) {
+  //Nyckel för temporär users caer
+  const tempUserKey = "tempUser";
 
-  // State to hold cart items and their quantities
+  // Hämtar users cart från local storage
+  const userId = user?.id;
+  const initialCartItems = userId
+    ? JSON.parse(localStorage.getItem("carts"))?.[userId] || []
+    : JSON.parse(localStorage.getItem("carts"))?.[tempUserKey] || [];
+
+
   const [cartItems, setCartItems] = useState(initialCartItems);
 
-  // Effect to sync cart items with local storage
-  useEffect(() => {
-    localStorage.setItem("cart", JSON.stringify(cartItems));
-  }, [cartItems]);
 
-  // Navigate to checkout page
+useEffect(() => {
+  if (userId) {
+    const carts = JSON.parse(localStorage.getItem("carts")) || {};
+    const userCart = carts[userId] || [];
+    setCartItems(userCart);
+  }
+}, [userId]);
+
+  // Navigation till checkout page
   const navigate = useNavigate();
 
-  // Function to handle quantity change
+  // Funktion för att hantera kvantitet
   const handleQuantityChange = (index, newQuantity) => {
     const updatedCartItems = cartItems.map((item, i) =>
       i === index ? { ...item, quantity: newQuantity } : item
@@ -26,7 +38,7 @@ function CartComponent() {
     setCartItems(updatedCartItems);
   };
 
-  // Function to handle pay button click
+  // Funktion för pay button
   const handlePayButtonClick = () => {
     // Navigate to checkout page
     navigate("/checkoutpage");
@@ -77,3 +89,4 @@ function CartComponent() {
 }
 
 export default CartComponent;
+

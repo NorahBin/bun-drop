@@ -12,7 +12,7 @@ function SignUpComponent() {
 
 
   function handlePasswordChange(e) {
-    // Add handler for password change
+  
     setPassword(e.target.value);
   }
 
@@ -30,7 +30,7 @@ function SignUpComponent() {
 
     //Städa upp inputs
     setName("");
-    setPassword(""); // Clear password input
+    setPassword(""); 
   }
 
   return (

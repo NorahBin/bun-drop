@@ -1,25 +1,30 @@
+
+
 import React, { useState, useEffect } from "react";
 import PaymentComponent from "./PaymentComponent";
 
-function CheckoutComponent() {
-  // Retrieve items from local storage
-  const initialCartItems = JSON.parse(localStorage.getItem("cart")) || [];
+function CheckoutComponent({ user }) {
+  // Variabel för inte inloggad user
+  const tempUserKey = "tempUser";
 
-  // State to hold cart items and their quantities
+  // Hämtar items från local storage
+  const userId = user?.id;
+  const initialCartItems = userId
+    ? JSON.parse(localStorage.getItem("carts"))?.[userId] || []
+    : JSON.parse(localStorage.getItem("carts"))?.[tempUserKey] || [];
+
   const [cartItems, setCartItems] = useState(initialCartItems);
 
-  // Function to handle quantity change
+  // Funktion för att hantera kvantitet
   const handleQuantityChange = (index, quantity) => {
     const newCartItems = [...cartItems];
     newCartItems[index].quantity = quantity;
     setCartItems(newCartItems);
   };
 
-  // Calculate total price
+  // Funktion för att kalkylera priset
   const totalPrice = cartItems
-    .reduce((total, item) => {
-      return total + item.price * item.quantity;
-    }, 0)
+    .reduce((total, item) => total + item.price * item.quantity, 0)
     .toFixed(2);
 
   return (
@@ -55,14 +60,11 @@ function CheckoutComponent() {
         <div className="total-price-container">
           <div className="total-price-title">Total:</div>
           <div className="price">{totalPrice}</div>
-          
         </div>
 
         <div className="checkout-pay-container">
           <PaymentComponent />
         </div>
-
-        
       </div>
     </div>
   );

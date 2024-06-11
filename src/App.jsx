@@ -20,7 +20,6 @@ function App() {
   //Variabel för att hålla koll på signed-in user
   const [user, setUser] = useState(null);
 
-
   return (
     <>
       <Router>
@@ -32,12 +31,12 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/menupage" element={<MenuPage user={user} />} />
 
-          <Route path="/cartpage" element={<CartPage />} />
+          <Route path="/cartpage" element={<CartPage user={user} />} />
           {/* <Route path="/favoritepage" element={<FavoritePage />} /> */}
 
           <Route path="/favoritepage" element={<FavoritePage user={user} />} />
 
-          <Route path="/checkoutpage" element={<CheckoutPage />} />
+          <Route path="/checkoutpage" element={<CheckoutPage user={user} />} />
           <Route path="/conformationpage" element={<ConformationPage />} />
           <Route path="/signuppage" element={<SignUpPage />} />
           <Route
@@ -51,4 +50,3 @@ function App() {
 }
 
 export default App;
-
