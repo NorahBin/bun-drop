@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate hook
 
@@ -58,57 +59,62 @@ function PaymentComponent() {
   const navigate = useNavigate(); // Initialize useNavigate hook
 
   return (
-    <div className="checkout-pay-container">
-      <h1>Payment</h1>
+    <>
+      <div className="checkout-pay-container">
+        <h1 className="payment-text payment-margin">Payment</h1>
 
-      <div className="checkout-pay-box">
-        <div className="swish-container">
-          <button
-            className="checkout-circle-button"
-            onClick={toggleSwishInputs}
-          ></button>
-          <input
-            type="text"
-            style={{ display: showSwishInputs ? "block" : "none" }}
-          />
-          <h2 className="swish-text">Swish</h2>
-        </div>
-        <div className="checkout-grey-line"></div>
+        <div className="checkout-pay-box">
+          <div className="swish-container">
+            <button
+              className="checkout-circle-button"
+              onClick={toggleSwishInputs}
+            ></button>
+            <h2 className="swish-text">Pay with Swish</h2>
 
-        <h2>Card</h2>
-
-        <button
-          className="checkout-circle-button"
-          onClick={toggleCardInputs}
-        ></button>
-        {showCardInputs && (
-          <div className="card-payment">
-            <div className="input-container">
-              <h3>Card number:</h3>
-
-              <input type="text" placeholder="Card Number" id="cardNumber" />
-
-              <h3>Expiry date:</h3>
-
-              <input id="expiryDate" type="text" placeholder="MM/YY" />
-
-              <h3>CVV:</h3>
-
-              <input id="cvv" type="text" placeholder="CVV" />
-
-              <h3>Card holder name:</h3>
-
-              <input
-                id="cardHolderName"
-                type="text"
-                placeholder="Cardholder Name"
-              />
-              <button onClick={handlePayment}>Pay</button>
-            </div>
+            <input
+              className="swish-input"
+              type="text"
+              style={{ display: showSwishInputs ? "block" : "none" }}
+            />
           </div>
-        )}
+
+          <div className="checkout-grey-line"></div>
+          <div className="checkout-card-container">
+            <button
+              className="checkout-circle-button"
+              onClick={toggleCardInputs}
+            ></button>
+            <h2 className="card-text">Card</h2>
+          </div>
+          {showCardInputs && (
+            <div className="card-payment">
+              <div className="input-container">
+                <h3>Card number:</h3>
+
+                <input type="text" placeholder="Card Number" id="cardNumber" />
+
+                <h3>Expiry date:</h3>
+
+                <input id="expiryDate" type="text" placeholder="MM/YY" />
+
+                <h3>CVV:</h3>
+
+                <input id="cvv" type="text" placeholder="CVV" />
+
+                <h3>Card holder name:</h3>
+
+                <input
+                  id="cardHolderName"
+                  type="text"
+                  placeholder="Cardholder Name"
+                />
+                <button onClick={handlePayment}>Pay</button>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
