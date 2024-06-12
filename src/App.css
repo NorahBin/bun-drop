@@ -533,10 +533,15 @@ body {
 
 
 
+.error-message {
+  color: red;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
 
 .checkout-text {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 4%;
   font-size: 50px;
   font-family: "Black Han Sans";
 }
@@ -549,6 +554,7 @@ body {
   max-width: 200px;
   height: 4px; 
   background-color: #d31d21;
+  margin-bottom: 2%;
 }
 
 
@@ -571,6 +577,7 @@ body {
   font-size: 26px;
   color: rgba(51, 53, 54, 1);
    font-weight: 550;
+   /* margin-top: -8%; */
 
 }
 
@@ -738,15 +745,113 @@ display: flex;
   width: 100%; 
   border: none; 
   border-radius: 10px; 
-  
+  margin-bottom: 5%;
 
-}
-
-
+} 
 
 
-.input-container {
+
+
+
+
+
+/* .input-container {
   display: flex;
-  flex-direction: column;
+ margin-left: 8%;
+ padding-top: 1%;
+    flex-wrap: wrap; 
+  gap: 10px; 
+} */
+
+.card-input{
+  width: 45%;
+  height: 30%;
+  margin-left: 8%;
 }
 
+.date-input{
+  margin-left: 8%;
+  width: 45%;
+  height: 30%;
+  
+}
+
+.cvv-input{
+  width: 45%;
+  height: 30%;
+  margin-top: 2%;
+  margin-left: 2%;
+  
+}
+
+.cardholder-input{
+  height: 30%;
+  margin-left: 2%;
+width: 45%;
+}
+
+
+.card-pay-button {
+  margin-top: 20px;
+  margin-left: 80%; 
+  width: 16%;
+  height: 30px; 
+  background-color: #d31d21;
+  color: #fff797;
+  font-size: 16px;
+  font-family: "Black Han Sans";
+  border: none;
+  border-radius: 10px;
+}
+
+
+.card-error-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-error-text{
+}
+
+.date-error-text{
+  color: red;
+  font-size: 10px;
+}
+
+.cvv-error-text{
+      color: red;
+  font-size: 10px;
+
+}
+
+.pay-button-error-text{
+      color: red;
+  font-size: 10px;
+
+    
+}
+
+.card-number-error-text{
+    color: red;
+  font-size: 10px;
+}
+
+.error-text-container{
+  margin-top: -9%;
+  margin-left: 8%;
+
+}
+
+.input-error-text{
+  color: red;
+  font-size: 10px;
+}
+
+/* Ensure consistent padding and margin for input fields */
+.card-input,
+.date-input,
+.cvv-input,
+.cardholder-input {
+  width: 45%;
+  height: 30px; /* Adjust height to a fixed value */
+}
