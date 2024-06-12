@@ -1,62 +1,76 @@
-
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate hook
+import { useNavigate } from "react-router-dom";
 
 function PaymentComponent() {
-  // State for managing the visibility of Swish inputs
+  // State hooks för att hantera visning av Swish och kortinmatningsfält.
   const [showSwishInputs, setShowSwishInputs] = useState(false);
-
-  // State for managing the visibility of Card inputs
   const [showCardInputs, setShowCardInputs] = useState(false);
 
-  // Function to toggle visibility of Swish inputs
+  // State hooks för kortinformation.
+  const [cardNumber, setCardNumber] = useState("");
+  const [cardHolderName, setCardHolderName] = useState("");
+  const [expiryDate, setExpiryDate] = useState("");
+  const [cvv, setCvv] = useState("");
+  const [inputError, setInputError] = useState(false);
+  const [cardNumberError, setCardNumberError] = useState(false);
+  const [cardNameError, setCardNameError] = useState(false);
+  const [dateError, setDateError] = useState(false);
+  const [cvvError, setCvvError] = useState(false);
+
+  const navigate = useNavigate();
+
+  // Funktion för att växla Swish-inmatningsfält.
   const toggleSwishInputs = () => {
     setShowSwishInputs(!showSwishInputs);
-    // You can add any additional logic here
   };
 
-  // Function to toggle visibility of Card inputs
+  // Funktion för att växla kortinmatningsfält.
   const toggleCardInputs = () => {
     setShowCardInputs(!showCardInputs);
-    // You can add any additional logic here
   };
 
   const handlePayment = () => {
-    // // Retrieve input values
-    // const cardNumber = document.getElementById("cardNumber").value;
-    // const expiryDate = document.getElementById("expiryDate").value;
-    // const cvv = document.getElementById("cvv").value;
-    // const cardHolderName = document.getElementById("cardHolderName").value;
+    // Återställ alla errormeddelande.
+    setInputError(false);
+    setCardNumberError(false);
+    setCardNameError(false);
+    setDateError(false);
+    setCvvError(false);
 
-    // // Define regex patterns for validation
-    // const cardNumberPattern = /^[0-9]{16}$/; // 16 digits
-    // const expiryDatePattern = /^(0[1-9]|1[0-2])\/?([0-9]{2})$/; // MM/YY format
-    // const cvvPattern = /^[0-9]{3}$/; // 3 digits
-    // const namePattern = /^[a-zA-Z\s]*$/; // Letters and spaces
+    let isValid = true;
 
-    // // Validate inputs
-    // if (!cardNumberPattern.test(cardNumber)) {
-    //   alert("Invalid card number. It must be 16 digits.");
-    //   return;
-    // }
-    // if (!expiryDatePattern.test(expiryDate)) {
-    //   alert("Invalid expiry date. Use MM/YY format.");
-    //   return;
-    // }
-    // if (!cvvPattern.test(cvv)) {
-    //   alert("Invalid CVV. It must be 3 digits.");
-    //   return;
-    // }
-    // if (!namePattern.test(cardHolderName)) {
-    //   alert("Invalid cardholder name. Only letters and spaces are allowed.");
-    //   return;
-    // }
+    // Kontrollera om alla fält är ifyllda.
 
-    // If all validations pass, navigate to the confirmation page
-    navigate("/conformationpage");
+    if (!cardNumber || !cardHolderName || !expiryDate || !cvv) {
+      setInputError(true);
+      isValid = false;
+    }
+
+    //Validera regex för kort nummer
+    if (!/^\d+$/.test(cardNumber)) {
+      setCardNumberError(true);
+      isValid = false;
+    }
+
+    if (!/^[a-zA-Z\s]*$/.test(cardHolderName)) {
+      setCardNameError(true);
+      isValid = false;
+    }
+
+    if (!/^\d{2}\/\d{2}$/.test(expiryDate)) {
+      setDateError(true);
+      isValid = false;
+    }
+
+    if (!/^\d{3}$/.test(cvv)) {
+      setCvvError(true);
+      isValid = false;
+    }
+
+    if (isValid) {
+      navigate("/conformationpage");
+    }
   };
-
-  const navigate = useNavigate(); // Initialize useNavigate hook
 
   return (
     <>
@@ -86,29 +100,81 @@ function PaymentComponent() {
             ></button>
             <h2 className="card-text">Card</h2>
           </div>
+
+          <h2 className="pay-swish-text swish-payment-margin">
+            Fill in your card information
+          </h2>
+
           {showCardInputs && (
             <div className="card-payment">
               <div className="input-container">
-                <h3>Card number:</h3>
-
-                <input type="text" placeholder="Card Number" id="cardNumber" />
-
-                <h3>Expiry date:</h3>
-
-                <input id="expiryDate" type="text" placeholder="MM/YY" />
-
-                <h3>CVV:</h3>
-
-                <input id="cvv" type="text" placeholder="CVV" />
-
-                <h3>Card holder name:</h3>
+                <input
+                  type="text"
+                  placeholder="Card Number"
+                  id="cardNumber"
+                  className="card-input"
+                  value={cardNumber}
+                  onChange={(e) => setCardNumber(e.target.value)}
+                />
 
                 <input
+                  className="cardholder-input"
                   id="cardHolderName"
                   type="text"
                   placeholder="Cardholder Name"
+                  value={cardHolderName}
+                  onChange={(e) => setCardHolderName(e.target.value)}
                 />
-                <button onClick={handlePayment}>Pay</button>
+
+                <input
+                  className="date-input"
+                  id="expiryDate"
+                  type="text"
+                  placeholder="MM/YY"
+                  value={expiryDate}
+                  onChange={(e) => setExpiryDate(e.target.value)}
+                />
+
+                <input
+                  id="cvv"
+                  type="text"
+                  placeholder="CVV"
+                  className="cvv-input"
+                  value={cvv}
+                  onChange={(e) => setCvv(e.target.value)}
+                />
+
+                <button className="card-pay-button" onClick={handlePayment}>
+                  Pay
+                </button>
+
+                <div className="error-text-container">
+                  {inputError && (
+                    <p className="input-error-text">
+                      Please fill in all inputs.
+                    </p>
+                  )}
+                  {cardNumberError && (
+                    <p className="card-number-error-text">
+                      Invalid input, please type in numbers.
+                    </p>
+                  )}
+                  {cardNameError && (
+                    <p className="card-name-error-text">
+                      Invalid input, please type in letters.
+                    </p>
+                  )}
+                  {dateError && (
+                    <p className="date-error-text">
+                      Invalid input, please type MM/YY format.
+                    </p>
+                  )}
+                  {cvvError && (
+                    <p className="cvv-error-text">
+                      Invalid input, please type CVV format.
+                    </p>
+                  )}
+                </div>
               </div>
             </div>
           )}
@@ -119,3 +185,4 @@ function PaymentComponent() {
 }
 
 export default PaymentComponent;
+

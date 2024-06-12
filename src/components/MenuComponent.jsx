@@ -147,7 +147,7 @@ const addToCart = (item) => {
             {filteredItems.map((item, index) => (
               <div key={index} className="menu-card">
                 <img src={item.image} alt={item.title} className="burger-pic" />
-                <h1 className="card-text">{item.title}</h1>
+                <h1 >{item.title}</h1>
                 <div className="red-line"></div>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>

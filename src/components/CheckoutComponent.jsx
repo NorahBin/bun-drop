@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import PaymentComponent from "./PaymentComponent";
-
 function CheckoutComponent({ user }) {
   const tempUserKey = "tempUser";
 
@@ -46,7 +45,6 @@ function CheckoutComponent({ user }) {
         <div className="total-price-container">
           <div className="total-price-title">Total:</div>
           <div className="price">{totalPrice}</div>
-          
         </div>
 
         <div className="checkout-pay-container">
