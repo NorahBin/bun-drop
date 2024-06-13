@@ -42,7 +42,7 @@ function CheckoutComponent({ user }) {
             <div className="checkout-first-grey-line "></div>
           </div>
         ))}
-        <div className="total-price-container">
+        <div className="checkout-total-price-container">
           <div className="total-price-title">Total:</div>
           <div className="price">{totalPrice}</div>
         </div>
