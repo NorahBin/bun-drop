@@ -16,9 +16,9 @@ function LandingPageCards({ startIndex }) {
         {menuItems.map((item) => (
           <div className="card" key={item.id}>
             <img src={item.image} alt={item.title} className="burger-pic" />
-            <h1 className="card-text">{item.title}</h1>
-            <div className="red-line"></div>
-            <p>{item.description}</p>
+            <h1 className="landing-page-card-text">{item.title}</h1>
+            <div className="landing-page-red-line"></div>
+            <p className="landing-page-description-text">{item.description}</p>
           </div>
         ))}
       </div>
