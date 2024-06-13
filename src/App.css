@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Luckiest+Guy&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -74,8 +74,6 @@ body {
   font-family: "Black Han Sans";
 }
 
-
-
 .navbar-text {
   gap: 20px;
   margin: 40px;
@@ -130,12 +128,10 @@ body {
   box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
 }
 
-.order-conformation-title{
+.order-conformation-title {
   text-align: center;
   margin-top: 20px;
 }
-
-
 
 .card-container {
   display: flex;
@@ -397,12 +393,10 @@ body {
 }
 
 .checkout-item-container {
- display: flex;
+  display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   padding: 10px; /* Adjusted for smaller screens */
-  
 }
-
 
 .order-name {
   margin-right: 160px;
@@ -413,19 +407,16 @@ body {
   height: 2px;
 }
 
-
-
 .checkout-grey-line {
-    width: 90%;
+  width: 90%;
   height: 3px;
-  background-color:  rgba(195, 195, 195, 0.3);
+  background-color: rgba(195, 195, 195, 0.3);
   margin-top: 2%;
   margin-left: 5%;
 }
 
-
-.checkout-quantity{
-  width:4%; /* Adjusted for smaller screens */
+.checkout-quantity {
+  width: 4%; /* Adjusted for smaller screens */
   margin-bottom: 5px; /* Added to create space between items */
   margin-left: 10%;
   margin-right: 2%;
@@ -502,8 +493,16 @@ body {
   gap: 20px;
   margin-top: 10px;
   /* margin-left: 460px; */
-   margin-left: 63%; 
-  
+  /* margin-left: 63%; */
+}
+
+.checkout-total-price-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  margin-left: 63%;
+  /* margin-left: 460px; */
+  /* margin-left: 63%; */
 }
 
 .total-price-title {
@@ -512,11 +511,10 @@ body {
   font-family: "Lato";
 }
 
+
 .price {
   font-size: 20px;
   margin-top: 5px;
-
-  
 }
 
 .pay-button {
@@ -530,8 +528,6 @@ body {
   font-size: 20px;
   font-family: "Black Han Sans";
 }
-
-
 
 .error-message {
   color: red;
@@ -552,42 +548,38 @@ body {
   border-radius: 10px;
   width: 80%; /* Adjusted for responsiveness */
   max-width: 200px;
-  height: 4px; 
+  height: 4px;
   background-color: #d31d21;
   margin-bottom: 2%;
 }
 
-
-.checkout-card-container{
+.checkout-card-container {
   display: flex;
   margin-top: 2%;
 }
 
-.card-text{
-    font-family: "Lato";
+.card-text {
+  font-family: "Lato";
   font-size: 20px;
   color: rgba(51, 53, 54, 1);
   margin-top: -0.5%;
-   font-weight: 400;
-
+  font-weight: 400;
 }
 
-.payment-text{
-      font-family: "Lato";
+.payment-text {
+  font-family: "Lato";
   font-size: 26px;
   color: rgba(51, 53, 54, 1);
-   font-weight: 550;
-   /* margin-top: -8%; */
-
+  font-weight: 550;
+  /* margin-top: -8%; */
 }
 
-.swish-input{
-  margin-left :3%;
+.swish-input {
+  margin-left: 8%;
   margin-bottom: 1%;
+  margin-top: 1%;
   height: 25px;
-    border: lightgrey solid 2px;
-
-  
+  border: lightgrey solid 2px;
 }
 
 .swish-input:focus {
@@ -595,55 +587,65 @@ body {
   outline: none; /* Remove the default outline for better styling */
 }
 
-.swish-container{
+.swish-container {
   display: flex;
   margin-top: 1%;
 }
 
-.swish-text{
+.swish-text {
   padding-right: 2%;
   font-family: "Lato";
   font-size: 20px;
   color: rgba(51, 53, 54, 1);
-    margin-top: -0.5%; /* Adjust this value as needed to move the text up */
- font-weight: 400;
+  margin-top: -0.5%; /* Adjust this value as needed to move the text up */
+  font-weight: 400;
 }
 
+.swish-input-button{
+  display: flex;
+  justify-content: space-between;
+}
 
-.payment-margin{
+.payment-margin {
   margin-left: 2%;
 }
 
-.swish-payment-margin{
+.swish-payment-margin {
   margin-left: 8%;
 }
-.pay-swish-text{
+.pay-swish-text {
   padding-right: 2%;
   font-family: "Lato";
   font-size: 15px;
   color: rgb(88, 89, 90);
-    margin-top: 0.5%; 
-    margin-bottom:2%;
- font-weight: 400;
+  margin-top: 0.5%;
+  margin-bottom: 2%;
+  font-weight: 400;
 }
 
-
-.swish-button{
-  margin-top: -10px;
+.swish-button {
+  margin-right: 30px;
+    width: 16%;
+  height: 30px;
+  background-color: #d31d21;
+  color: #fff797;
+  font-size: 16px;
+  font-family: "Black Han Sans";
+  border: none;
+  border-radius: 10px;
 }
 
-.checkout-price{
+.checkout-price {
   justify-content: space-between;
 }
 
 .checkout-first-grey-line {
   width: 64%; /* Or any other styles you need */
   height: 3px;
-  background-color:  rgba(195, 195, 195, 0.3);
+  background-color: rgba(195, 195, 195, 0.3);
   margin-left: 16%;
   border-radius: 10px;
 }
-
 
 .order-name-price-container {
   display: flex;
@@ -659,13 +661,11 @@ body {
   
 } */
 
-.checkout-name{
+.checkout-name {
   position: relative;
   bottom: 10%;
   font-family: "Lato";
-    color: rgba(51, 53, 54, 1);
-
-
+  color: rgba(51, 53, 54, 1);
 }
 
 .checkout-name-price-container {
@@ -675,85 +675,64 @@ body {
   flex-grow: 1;
   flex-wrap: wrap;
   margin-right: 20%;
-} 
-
+}
 
 /* .checkout-name-price-container {
   display: flex;
   justify-content: space-between;
 } */
- .checkout-container {
+.checkout-container {
   display: flex;
   justify-content: center;
   padding-top: 2%;
-  padding-bottom:2%;
-  
+  padding-bottom: 2%;
 }
-
 
 .checkout-items-container {
   /* width: 800px; */
-    width: 60%;
+  width: 60%;
   max-width: 800px;
-  
 
   border: #29c1db solid 5px;
   background-color: white;
   border-radius: 10px;
-
-} 
-
-
-.checkout-pay-container{
- 
-    margin-left: 7%;
-    margin-bottom: 5%;
-    margin-top: 3%;
-  
-  
 }
 
-.checkout-pay-box{
-  
+.checkout-pay-container {
+  margin-left: 7%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.checkout-pay-box {
   /* height: 180px; */
   width: 80%;
-    border: rgba(195, 195, 195, 0.3)solid 3px;
-    border-radius: 10px;
+  border: rgba(195, 195, 195, 0.3) solid 3px;
+  border-radius: 10px;
 
-     padding: 2%; 
-
-
-  
+  padding: 2%;
 }
 
-
-.checkout-circle-button{
+.checkout-circle-button {
   width: 20px;
   height: 20px;
   border: 1px solid lightgrey;
-  border-radius: 50%; 
-  margin: 0 10px; 
+  border-radius: 50%;
+  margin: 0 10px;
 }
 
 .checkout-circle-button.active {
-  border: 6px solid rgba(51, 53, 54, 1) /* Adjust as needed */
+  border: 6px solid rgba(51, 53, 54, 1); /* Adjust as needed */
 }
 
 .card-payment {
-display: flex;
-  height: 100%; 
-  width: 100%; 
-  border: none; 
-  border-radius: 10px; 
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
   margin-bottom: 5%;
-
-} 
-
-
-
-
-
-
+}
 
 /* .input-container {
   display: flex;
@@ -763,39 +742,36 @@ display: flex;
   gap: 10px; 
 } */
 
-.card-input{
+.card-input {
   width: 45%;
   height: 30%;
   margin-left: 8%;
 }
 
-.date-input{
+.date-input {
   margin-left: 8%;
   width: 45%;
   height: 30%;
-  
 }
 
-.cvv-input{
+.cvv-input {
   width: 45%;
   height: 30%;
   margin-top: 2%;
   margin-left: 2%;
-  
 }
 
-.cardholder-input{
+.cardholder-input {
   height: 30%;
   margin-left: 2%;
-width: 45%;
+  width: 45%;
 }
-
 
 .card-pay-button {
   margin-top: 20px;
-  margin-left: 80%; 
+  margin-left: 80%;
   width: 16%;
-  height: 30px; 
+  height: 30px;
   background-color: #d31d21;
   color: #fff797;
   font-size: 16px;
@@ -804,47 +780,48 @@ width: 45%;
   border-radius: 10px;
 }
 
-
-.card-error-container{
+.card-error-container {
   display: flex;
   justify-content: space-between;
 }
 
-.card-error-text{
+.card-error-text {
 }
 
-.date-error-text{
+.date-error-text {
   color: red;
   font-size: 10px;
 }
 
-.cvv-error-text{
-      color: red;
-  font-size: 10px;
-
-}
-
-.pay-button-error-text{
-      color: red;
-  font-size: 10px;
-
-    
-}
-
-.card-number-error-text{
-    color: red;
+.cvv-error-text {
+  color: red;
   font-size: 10px;
 }
 
-.error-text-container{
+.pay-button-error-text {
+  color: red;
+  font-size: 10px;
+}
+
+.card-number-error-text {
+  color: red;
+  font-size: 10px;
+}
+
+.error-text-container {
   margin-top: -9%;
   margin-left: 8%;
-
 }
 
-.input-error-text{
+.input-error-text {
   color: red;
   font-size: 10px;
+}
+
+.swish-error-text{
+    color: red;
+  font-size: 10px;
+  margin-left: 8%;
 }
 
 /* Ensure consistent padding and margin for input fields */
@@ -855,3 +832,9 @@ width: 45%;
   width: 45%;
   height: 30px; /* Adjust height to a fixed value */
 }
+
+.checkout-circle-button.active {
+  border: 2px solid black; 
+}
+
+
