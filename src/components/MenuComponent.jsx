@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 import { GiHamburger } from "react-icons/gi";
 import { RiDrinks2Fill } from "react-icons/ri";
@@ -26,7 +24,7 @@ function MenuComponent({ user }) {
       favorites[userId] = [];
     }
 
-    // Check if the item is already in the favorites
+    // Kolla om item redan finns i favorite
     const isItemInFavorites = favorites[userId].some(
       (favoriteItem) => favoriteItem.id === item.id
     );
@@ -40,45 +38,36 @@ function MenuComponent({ user }) {
     }
   };
 
-
-
   const handleFilterClick = (filter, button) => {
     setFilter(filter);
     setActiveButton(button);
   };
 
-
-
 const addToCart = (item) => {
-  // Kollar om det finns en signed in user
   const userId = user?.id;
-
-  // Hämtar carts från lokal storage, annats initialisera en ny. 
   let carts = JSON.parse(localStorage.getItem("carts")) || {};
-
-  // Bestäm cart key baserat på user id eller om det är temp user
   const cartKey = userId || "tempUser";
-
-  // Hämtar users cars eller temporary cart 
   let userCart = carts[cartKey] || [];
 
-  // Kollar om itemet redan finns i carten
   const existingItemIndex = userCart.findIndex(
     (cartItem) => cartItem.id === item.id
   );
 
   if (existingItemIndex > -1) {
-    // Om det finns en, öka kvantiteten
     userCart[existingItemIndex].quantity += 1;
   } else {
-    // Annats lägg till varan
     userCart.push({ ...item, quantity: 1 });
   }
 
-  // Uppdaterar carts objektet med det nya user carts 
   carts[cartKey] = userCart;
   localStorage.setItem("carts", JSON.stringify(carts));
+
+  // Update userOrderCart
+  let userOrderCarts = JSON.parse(localStorage.getItem("userOrderCarts")) || {};
+  userOrderCarts[cartKey] = userCart;
+  localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
 };
+
 
   const filteredItems = menuItems.filter((item) => {
     if (filter === "all") return true;
@@ -147,7 +136,7 @@ const addToCart = (item) => {
             {filteredItems.map((item, index) => (
               <div key={index} className="menu-card">
                 <img src={item.image} alt={item.title} className="burger-pic" />
-                <h1 >{item.title}</h1>
+                <h1>{item.title}</h1>
                 <div className="red-line"></div>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
@@ -164,7 +153,6 @@ const addToCart = (item) => {
                     Add to favorites
                   </button>
                 )}
-             
               </div>
             ))}
           </div>
@@ -175,3 +163,4 @@ const addToCart = (item) => {
 }
 
 export default MenuComponent;
+

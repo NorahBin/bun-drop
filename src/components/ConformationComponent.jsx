@@ -1,23 +1,20 @@
-
 import React, { useState, useEffect } from "react";
 
-function ConformationComponent({ user }) {
-  // variabel för tempUser vart
+function ConfirmationComponent({ user }) {
   const tempUserKey = "tempUser";
-
-  // Hämtar users cart från local storage
   const userId = user?.id;
+  const userOrderCarts =
+    JSON.parse(localStorage.getItem("userOrderCarts")) || {};
   const initialCartItems = userId
-    ? JSON.parse(localStorage.getItem("carts"))?.[userId] || []
-    : JSON.parse(localStorage.getItem("carts"))?.[tempUserKey] || [];
+    ? userOrderCarts[userId] || []
+    : userOrderCarts[tempUserKey] || [];
 
-  // State to hold cart items
   const [cartItems, setCartItems] = useState(initialCartItems);
 
   return (
-    <div className="conformation-container">
-      <div className="conformation-box">
-        <div className="order-conformation-title">
+    <div className="confirmation-container">
+      <div className="confirmation-box">
+        <div className="order-confirmation-title">
           <h1>Order Confirmation</h1>
           <p>
             Thank you for your order! Your order has been successfully placed.
@@ -28,7 +25,6 @@ function ConformationComponent({ user }) {
           <div key={index}>
             {item.name} x{item.quantity}
             {item.name} {item.title}
-         
           </div>
         ))}
       </div>
@@ -36,10 +32,5 @@ function ConformationComponent({ user }) {
   );
 }
 
-export default ConformationComponent;
-
-
-
-
-
+export default ConfirmationComponent;
 
