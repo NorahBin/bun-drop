@@ -1,12 +1,17 @@
+
+
 import React, { useState, useEffect } from "react";
 import PayButtonComp from "./PayButtonComp";
 import { useNavigate } from "react-router-dom";
 
 function CartComponent({ user }) {
-  // Key for temporary user's cart
+
+    const navigate = useNavigate();
+
+  // Key för users temporary cart
   const tempUserKey = "tempUser";
 
-  // Fetch user's cart from local storage
+  // Hämta users cart från localstorage
   const userId = user?.id;
   const initialCartItems = userId
     ? JSON.parse(localStorage.getItem("carts"))?.[userId] || []
@@ -39,10 +44,7 @@ function CartComponent({ user }) {
     localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
   }, [cartItems, userId]);
 
-  // Navigation to checkout page
-  const navigate = useNavigate();
-
-  // Function to handle quantity
+  // Funktion för att hantera kvantitet
   const handleQuantityChange = (index, newQuantity) => {
     const updatedCartItems = cartItems.map((item, i) =>
       i === index ? { ...item, quantity: newQuantity } : item
@@ -50,13 +52,13 @@ function CartComponent({ user }) {
     setCartItems(updatedCartItems);
   };
 
-  // Function for pay button
+  // Funktion för pay button
   const handlePayButtonClick = () => {
-    // Navigate to checkout page
+    // Navigera till checkout page
     navigate("/checkoutpage");
   };
 
-  // Calculate total price:
+  // Kalkylera det totala priset
   const totalPrice = cartItems
     .reduce((total, item) => total + item.price * item.quantity, 0)
     .toFixed(2);
@@ -98,4 +100,3 @@ function CartComponent({ user }) {
 }
 
 export default CartComponent;
-

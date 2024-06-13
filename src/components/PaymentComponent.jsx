@@ -1,7 +1,13 @@
+
+
+
+
+
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function PaymentComponent() {
+function PaymentComponent({user}) {
   const [showSwishInputs, setShowSwishInputs] = useState(false);
   const [showCardInputs, setShowCardInputs] = useState(false);
 
@@ -29,10 +35,10 @@ function PaymentComponent() {
         setCardNumberError(false);
         setCardNameError(false);
         setDateError(false);
-        setCvvError(false); // Reset all card input errors when toggling Swish on
+        setCvvError(false); //
       }
       if (!newState) {
-        setSwishError(false); // Reset the Swish error when toggling off
+        setSwishError(false); // Resetta swish error när den inte är togglad
       }
       return newState;
     });
@@ -42,15 +48,15 @@ function PaymentComponent() {
     setShowCardInputs((prev) => {
       const newState = !prev;
       if (newState) {
-        setShowSwishInputs(false); // Close Swish inputs when Card is toggled on
-        setSwishError(false); // Reset the Swish error when Card is toggled on
+        setShowSwishInputs(false); // Stäng swish inputs när card e toggled
+        setSwishError(false); // Reset swish error när card e toggled
       }
       if (!newState) {
         setInputError(false);
         setCardNumberError(false);
         setCardNameError(false);
         setDateError(false);
-        setCvvError(false); // Reset all card input errors when toggling off
+        setCvvError(false); // Reset alla inputs när card inte är toggled
       }
       return newState;
     });
@@ -62,11 +68,12 @@ function PaymentComponent() {
     return isValidSwish;
   };
 
-  const handleSwishPayment = () => {
-    if (validateSwishNumber()) {
-      navigate("/conformationpage");
-    }
-  };
+const handleSwishPayment = () => {
+  if (validateSwishNumber()) {
+   
+    handlePaymentSuccess();
+  }
+};
 
   const handlePayment = () => {
     setInputError(false);
@@ -103,9 +110,30 @@ function PaymentComponent() {
     }
 
     if (isValid) {
-      navigate("/confirmationpage");
+   
+      handlePaymentSuccess();
     }
   };
+
+  const handlePaymentSuccess = () => {
+    // Töm cart från local storage
+    clearCart();
+   
+    navigate("/conformationpage");
+  };
+
+const clearCart = () => {
+  //Hämtar carts från local storage
+  const carts = JSON.parse(localStorage.getItem("carts")) || {};
+  if (user && user.id) {
+    // Om användaren är inloggad, clear
+    delete carts[user.id];
+  } else {
+    // Om användaren inte är inloggad, töm user temporare cart
+    delete carts["tempUser"];
+  }
+  localStorage.setItem("carts", JSON.stringify(carts));
+};
 
   return (
     <div className="checkout-pay-container">
@@ -232,3 +260,5 @@ function PaymentComponent() {
 }
 
 export default PaymentComponent;
+
+

@@ -51,7 +51,7 @@ function CheckoutComponent({ user }) {
           <div className="price">{totalPrice}</div>
         </div>
         <div className="checkout-pay-container">
-          <PaymentComponent />
+          <PaymentComponent user={user} />
         </div>
       </div>
     </div>
@@ -59,4 +59,5 @@ function CheckoutComponent({ user }) {
 }
 
 export default CheckoutComponent;
+
 
