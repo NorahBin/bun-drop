@@ -80,7 +80,7 @@ const addToCart = (item) => {
         <div className="red-menu">
           <div className="menu-text-container">
             <button
-              className={`all-text all-button ${
+              className={`all-text menu-all-button ${
                 activeButton === "all" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("all", "all")}
@@ -90,59 +90,69 @@ const addToCart = (item) => {
             <span className="white-line"></span>
 
             <button
-              className={`burger-text all-button ${
+              className={`burger-text menu-burger-button ${
                 activeButton === "burgers" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("burgers", "burgers")}
             >
               Burgers
-              <GiHamburger className="hamburger-icon" />
             </button>
+            <GiHamburger className="hamburger-icon" />
+
             <span className="white-line"></span>
 
             <button
-              className={`all-button ${
+              className={`menu-sides-button ${
                 activeButton === "sides" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("sides", "sides")}
             >
               Sides
-              <GiFrenchFries className="sides-icon" />
             </button>
+            <GiFrenchFries className="sides-icon" />
+
             <span className="white-line"></span>
 
             <button
-              className={`all-button ${
+              className={`menu-drink-button ${
                 activeButton === "drinks" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("drinks", "drinks")}
             >
               Drinks
-              <RiDrinks2Fill className="drink-icon" />
             </button>
+            <RiDrinks2Fill className="drink-icon" />
+
             <span className="white-line"></span>
 
             <button
-              className={`all-button ${
+              className={`menu-dessert-button ${
                 activeButton === "desserts" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("desserts", "desserts")}
             >
               Desserts
-              <IoIosIceCream className="dessert-icon" />
             </button>
+            <IoIosIceCream className="dessert-icon" />
           </div>
           <div className="menu-card-container">
             {filteredItems.map((item, index) => (
               <div key={index} className="menu-card">
-                <img src={item.image} alt={item.title} className="burger-pic" />
-                <h1>{item.title}</h1>
-                <div className="red-line"></div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="menu-burger-pic"
+                />
                 <h2>{item.name}</h2>
-                <p>{item.description}</p>
-                <p>{item.price}</p>
+                <h1 className="menu-text-title">{item.title}</h1>
+                <div className="menu-red-line"></div>
+                <p className="menu-description">{item.description}</p>
+                <div className="menu-price-container">
+                  <p className="menu-price-text">Price: </p>
+                  <p className="menu-price">{item.price}$</p>
+                </div>
                 <button
-                  className="sign-in order-button"
+                  className="menu-order-button "
                   onClick={() => addToCart(item)}
                 >
                   Order

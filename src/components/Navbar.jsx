@@ -29,7 +29,7 @@ function NavBar({ user, setUser }) {
               <h2 className="favorites-text">FAVORITES</h2>
             </NavLink>
           )}
-          <h2 className="cart-text">ABOUT US</h2>
+          <h2 className="home-text">Home</h2>
         </div>
         <NavLink to={user ? "/" : "/signinpage"}>
           <button className="sign-in" onClick={buttonAction}>
