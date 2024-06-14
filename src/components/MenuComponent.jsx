@@ -80,7 +80,7 @@ const addToCart = (item) => {
         <div className="red-menu">
           <div className="menu-text-container">
             <button
-              className={`all-text all-button ${
+              className={`all-text menu-all-button ${
                 activeButton === "all" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("all", "all")}
@@ -90,7 +90,7 @@ const addToCart = (item) => {
             <span className="white-line"></span>
 
             <button
-              className={`burger-text all-button ${
+              className={`burger-text menu-burger-button ${
                 activeButton === "burgers" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("burgers", "burgers")}
@@ -101,7 +101,7 @@ const addToCart = (item) => {
             <span className="white-line"></span>
 
             <button
-              className={`all-button ${
+              className={`menu-sides-button ${
                 activeButton === "sides" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("sides", "sides")}
@@ -112,7 +112,7 @@ const addToCart = (item) => {
             <span className="white-line"></span>
 
             <button
-              className={`all-button ${
+              className={`menu-drink-button ${
                 activeButton === "drinks" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("drinks", "drinks")}
@@ -123,7 +123,7 @@ const addToCart = (item) => {
             <span className="white-line"></span>
 
             <button
-              className={`all-button ${
+              className={`menu-dessert-button ${
                 activeButton === "desserts" ? "yellow-active" : ""
               }`}
               onClick={() => handleFilterClick("desserts", "desserts")}
@@ -135,14 +135,14 @@ const addToCart = (item) => {
           <div className="menu-card-container">
             {filteredItems.map((item, index) => (
               <div key={index} className="menu-card">
-                <img src={item.image} alt={item.title} className="burger-pic" />
+                <img src={item.image} alt={item.title} className="menu-burger-pic" />
                 <h1>{item.title}</h1>
                 <div className="red-line"></div>
                 <h2>{item.name}</h2>
                 <p>{item.description}</p>
                 <p>{item.price}</p>
                 <button
-                  className="sign-in order-button"
+                  className="menu-sign-in menu-order-button"
                   onClick={() => addToCart(item)}
                 >
                   Order

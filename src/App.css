@@ -7,7 +7,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box; /* Add this to include padding and border in the element's total width and height */
 }
 
 html,
@@ -217,7 +216,7 @@ body {
   background-color: #d31d21;
 
   border-radius: 50%;
-margin-right: 4%;
+margin-right:2%;
 }
 
 
@@ -243,7 +242,224 @@ margin-right: 4%;
   border-radius: 50%; /* to make it a circle */
 }
 
+
+
+
 /* *-------------------------------------------* */
+
+/* MenuComponent.jsx */
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+}
+
+.red-menu {
+  margin-top: 30px;
+  height: 80px;
+  width: 86vw;
+  background-color: #d31d21;
+  border-radius: 15px;
+  margin-right: 5%;
+}
+
+
+.menu-text-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  /* justify-content: space-around; */
+  color: white;
+  font-family: "Black Han Sans";
+  
+
+  /* justify-content: space-around; */
+}
+
+
+.all-text{
+
+}
+
+.burger-text{
+
+}
+
+.menu-all-button {
+  font-family: "Black Han Sans";
+  font-size: 35px;
+  color: white;
+  background-color: #d31d21;
+  border: none;
+}
+
+
+.menu-burger-button {
+  font-family: "Black Han Sans";
+  font-size: 35px;
+  color: white;
+  background-color: #d31d21;
+  border: none;
+}
+
+
+.menu-sides-button {
+  font-family: "Black Han Sans";
+  font-size: 35px;
+  color: white;
+  background-color: #d31d21;
+  border: none;
+}
+
+
+.menu-drink-button {
+  font-family: "Black Han Sans";
+  font-size: 35px;
+  color: white;
+  background-color: #d31d21;
+  border: none;
+}
+
+
+.menu-dessert-button {
+  font-family: "Black Han Sans";
+  font-size: 35px;
+  color: white;
+  background-color: #d31d21;
+  border: none;
+}
+
+
+
+
+
+.yellow-active {
+  color: #fff797;
+}
+
+
+
+.white-line {
+  height: 50px;
+  width: 3px;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.hamburger-icon {
+  font-size: 45px;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+.sides-icon {
+  font-size: 45px;
+  margin-right: 20px;
+}
+
+.drink-icon {
+  font-size: 45px;
+  margin-right: 20px;
+}
+
+
+.dessert-icon {
+  font-size: 60px;
+  margin-right: 20px;
+  margin-top: -8px;
+}
+
+.menu-card-container {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 20px;
+  gap: 20px;
+  width: 100vw;
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 50vh;
+  width: 60vh;
+  background-color: white;
+  border: #29c1db solid 5px;
+}
+
+/* Avnänds inte */
+.menu-text-container h1 {
+  margin-right: 20px; /* Adjust this value to add space between h1 elements and white lines */
+}
+
+.menu-burger-pic {
+  height: 70%;
+  width: 70%;
+}
+
+.red-line {
+  background-color: #d31d21;
+  width: 50%;
+  height: 2px;
+}
+
+.menu-sign-in {
+  border: none;
+  border-radius: 10px;
+  margin-right: 100px;
+  height: 40px;
+  width: 200px;
+  margin-top: 35px;
+  background-color: #d31d21;
+  color: #fff797;
+  font-size: 30px;
+  font-family: "Black Han Sans";
+}
+
+.menu-order-button {
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+/* *-------------------------------------------* */
+
+/* MenuCardsComponent.jxs */
+
+/* Finns dubletter av dessa i menucomponent */
+/* .menu-card-container {
+  flex-wrap: wrap;
+  display: flex;
+  margin-top: 20px;
+  margin-left: 34px;
+  padding: 10px;
+  gap: 20px;
+} */
+
+/* .menu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  height: 50vh;
+  width: 60vh;
+  background-color: white;
+  border: #29c1db solid 5px;
+
+} */
+
+
+.burger-pic {
+  height: 70%;
+  width: 70%;
+}
+
+/* *-------------------------------------------* */
+
+
 
 
 /* .navbar-underline {
@@ -274,11 +490,7 @@ body {
 } */
 
 
-.red-line {
-  background-color: #d31d21;
-  width: 50%;
-  height: 2px;
-}
+
 .card-text {
   font-family: "Lato";
   font-size: 20px;
@@ -360,21 +572,8 @@ body {
 
 
 
-.menu-container {
-  display: flex;
-  justify-content: center;
-}
 
-.menu-text-container {
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  /* justify-content: space-around; */
-  color: white;
-  font-family: "Black Han Sans";
 
-  /* justify-content: space-around; */
-}
 
 .all-button {
   font-family: "Black Han Sans";
@@ -388,76 +587,22 @@ body {
   color: #fff797;
 }
 
-.red-menu {
-  margin-top: 30px;
-  height: 80px;
-  width: 95vw;
-  background-color: #d31d21;
-  border-radius: 15px;
-}
 
-.white-line {
-  height: 50px;
-  width: 3px;
-  background-color: white;
-  margin-right: 50px;
-  border-radius: 10px;
-  margin-top: 5px;
-}
 
-.hamburger-icon {
-  font-size: 45px;
-  margin-right: 20px;
-  margin-left: 15px;
-}
 
-.sides-icon {
-  font-size: 45px;
-  margin-right: 20px;
-}
-.dessert-icon {
-  font-size: 60px;
-  margin-right: 20px;
-  margin-top: -8px;
-}
 
-.drink-icon {
-  font-size: 45px;
-  margin-right: 20px;
-}
-.menu-text-container h1 {
-  margin-right: 20px; /* Adjust this value to add space between h1 elements and white lines */
-}
 
-.menu-card-container {
-  flex-wrap: wrap;
-  display: flex;
-  margin-top: 20px;
-  margin-left: 34px;
-  padding: 10px;
-  gap: 20px;
-}
 
-.menu-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  height: 50vh;
-  width: 60vh;
-  background-color: white;
-  border: #29c1db solid 5px;
-}
+
+
+
 
 .order-button {
   margin-left: 80px;
   margin-bottom: 20px;
 }
 
-.yellow-active {
-  color: #fff797;
-}
+
 
 .order-container {
   display: flex;
