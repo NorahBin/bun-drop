@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PayButtonComp from "./PayButtonComp";
 import { useNavigate } from "react-router-dom";
+import { MdDelete } from "react-icons/md";
+
 
 function CartComponent({ user }) {
   const navigate = useNavigate();
@@ -121,14 +123,14 @@ function CartComponent({ user }) {
                 className="order-delete-button"
                 onClick={() => handleDeleteItem(index)}
               >
-                Delete
+                <MdDelete className="delete-icon" />
               </button>
               <div className="order-grey-line"></div>
             </div>
           ))}
-          <div className="total-price-container">
-            <div className="total-price-title">Total Price:</div>
-            <div className="price">{totalPrice}</div>
+          <div className="cart-total-price-container">
+            <div className="cart-total-price-title">Total Price:</div>
+            <div className="cart-price">{totalPrice}</div>
             <PayButtonComp onClick={handlePayButtonClick} />
           </div>
         </div>

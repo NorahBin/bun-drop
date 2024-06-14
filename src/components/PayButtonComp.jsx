@@ -2,7 +2,7 @@ import React from "react";
 
 function PayButtonComp({ onClick }) {
   return (
-    <button className="pay-button" onClick={onClick}>
+    <button className="cart-pay-button" onClick={onClick}>
       Checkout
     </button>
   );

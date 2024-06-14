@@ -36,7 +36,7 @@ function CheckoutComponent({ user }) {
               type="text"
               value={`${item.quantity}x`}
               readOnly
-              className="checkout-quantity quantity-margin"
+              className="checkout-quantity"
             />
             <div className="checkout-name-price-container">
               <h1 className="checkout-name">{item.title}</h1>
@@ -47,8 +47,8 @@ function CheckoutComponent({ user }) {
           </div>
         ))}
         <div className="checkout-total-price-container">
-          <div className="total-price-title">Total:</div>
-          <div className="price">{totalPrice}</div>
+          <div className="checkout-total-price-title">Total:</div>
+          <div className="checkout-price-text">{totalPrice}</div>
         </div>
         <div className="checkout-pay-container">
           <PaymentComponent user={user} />
