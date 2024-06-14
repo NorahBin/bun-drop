@@ -96,8 +96,9 @@ const addToCart = (item) => {
               onClick={() => handleFilterClick("burgers", "burgers")}
             >
               Burgers
-              <GiHamburger className="hamburger-icon" />
             </button>
+            <GiHamburger className="hamburger-icon" />
+
             <span className="white-line"></span>
 
             <button
@@ -107,8 +108,9 @@ const addToCart = (item) => {
               onClick={() => handleFilterClick("sides", "sides")}
             >
               Sides
-              <GiFrenchFries className="sides-icon" />
             </button>
+            <GiFrenchFries className="sides-icon" />
+
             <span className="white-line"></span>
 
             <button
@@ -118,8 +120,9 @@ const addToCart = (item) => {
               onClick={() => handleFilterClick("drinks", "drinks")}
             >
               Drinks
-              <RiDrinks2Fill className="drink-icon" />
             </button>
+            <RiDrinks2Fill className="drink-icon" />
+
             <span className="white-line"></span>
 
             <button
@@ -129,20 +132,27 @@ const addToCart = (item) => {
               onClick={() => handleFilterClick("desserts", "desserts")}
             >
               Desserts
-              <IoIosIceCream className="dessert-icon" />
             </button>
+            <IoIosIceCream className="dessert-icon" />
           </div>
           <div className="menu-card-container">
             {filteredItems.map((item, index) => (
               <div key={index} className="menu-card">
-                <img src={item.image} alt={item.title} className="menu-burger-pic" />
-                <h1>{item.title}</h1>
-                <div className="red-line"></div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="menu-burger-pic"
+                />
                 <h2>{item.name}</h2>
-                <p>{item.description}</p>
-                <p>{item.price}</p>
+                <h1 className="menu-text-title">{item.title}</h1>
+                <div className="menu-red-line"></div>
+                <p className="menu-description">{item.description}</p>
+                <div className="menu-price-container">
+                  <p className="menu-price-text">Price: </p>
+                  <p className="menu-price">{item.price}$</p>
+                </div>
                 <button
-                  className="menu-sign-in menu-order-button"
+                  className="menu-order-button "
                   onClick={() => addToCart(item)}
                 >
                   Order
