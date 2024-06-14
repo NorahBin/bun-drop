@@ -508,45 +508,80 @@ margin-right:2%;
 .order-container {
   display: flex;
   justify-content: center;
-
-  margin-top: 60px;
+padding-bottom: 2%;
+  margin-top: 2%;
 }
 
 .order-box {
-  width: 800px;
-  height: 500px;
+  /* width: 800px; */
+  width: 50vw;
   border: #29c1db solid 5px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 
 .order-title {
   text-align: center;
-  margin-top: 30px;
-  font-size: 50px;
+  margin-top: 6%;
+  font-size: 4vw;
   font-family: "Black Han Sans";
 }
 
 .red-line-orders {
-  margin-left: 330px;
+  margin-left: 40%;
   background-color: #d31d21;
-  height: 3px;
-  width: 130px;
+  height: 0.6vh;
+  width: 20%;
+  border-radius: 20px;
+  margin-top: -1%;
+  margin-bottom: 3%;
 }
 
 .order-item-container {
   display: flex;
-  padding-left: 80px;
-  padding-right: 80px;
-  justify-content: space-between;
-  margin-top: 10px;
+  padding-left: 13%;
+  margin-top: 1%;
   flex-wrap: wrap;
 }
 
-.order-name {
-  margin-right: 160px;
+/* .order-name {
+  font-family: "Lato";
+  font-size: 1.5rem;
+} */
+
+
+
+
+.order-delete-button{
+
+    width: 6%;
+  border:none;
+  background-color:lightgrey;
+  border-radius: 10px;
+  margin-left: 4%;
+  margin-right: 16%;
+
 }
+
+.order-name {
+  font-family: "Lato";
+  font-size: 1.5rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .order-name {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .order-name {
+    font-size: 1rem; /* Further adjust the font size for even smaller screens */
+  }
+}
+
 
 .total-price-container {
   display: flex;
@@ -567,6 +602,34 @@ margin-right:2%;
   font-size: 20px;
   margin-top: 5px;
 }
+
+.order-price-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.order-quantity{
+  width: 6%;
+  border:none;
+  background-color:lightgrey;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 3%;
+
+}
+
+.order-grey-line{
+    width: 64%;
+  height: 3px;
+  background-color: rgba(195, 195, 195, 0.3);
+  margin-top: 2%;
+  margin-left: 11%;
+}
+
 
 
 
