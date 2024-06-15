@@ -1,7 +1,7 @@
 {
   "menu": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Classic Burger",
       "price": 8.99,
       "description": "A classic beef burger with lettuce, tomato, and cheese.",
@@ -10,7 +10,7 @@
       "quantity": 1
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Sweet Potato Fries",
       "price": 4.99,
       "description": "Crispy sweet potato fries topped with fresh parsley.",
@@ -19,7 +19,7 @@
       "quantity": 1
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Soda",
       "price": 1.99,
       "description": "A refreshing carbonated drink available in various flavors.",
@@ -28,7 +28,7 @@
       "quantity": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Cheeseburger",
       "price": 9.99,
       "description": "A juicy beef burger with melted cheese, lettuce, and tomato.",
@@ -37,7 +37,7 @@
       "quantity": 1
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Onion Rings",
       "price": 3.99,
       "description": "Crispy golden onion rings served with dipping sauce.",
@@ -46,7 +46,7 @@
       "quantity": 1
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Iced Tea",
       "price": 2.49,
       "description": "Refreshing iced tea available in lemon and peach flavors.",
@@ -55,7 +55,7 @@
       "quantity": 1
     },
     {
-      "id": 16,
+      "id": "16",
       "title": "Icecream",
       "price": 8.99,
       "description": "Delicious icecream with sprincles",
@@ -99,11 +99,31 @@
       "id": "fca6",
       "name": "user7",
       "password": "password"
+    },
+    {
+      "id": "70f1",
+      "name": "",
+      "password": ""
+    },
+    {
+      "id": "6e1b",
+      "name": "",
+      "password": ""
+    },
+    {
+      "id": "4bce",
+      "name": "",
+      "password": ""
+    },
+    {
+      "id": "c4e3",
+      "name": "",
+      "password": ""
     }
   ],
   "mostPopular": [
     {
-      "id": 7,
+      "id": "7",
       "title": "Classic Burger",
       "price": 8.99,
       "description": "A classic beef burger with lettuce, tomato, and cheese.",
@@ -112,7 +132,7 @@
       "quantity": 1
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Sweet Potato Fries",
       "price": 4.99,
       "description": "Crispy sweet potato fries topped with fresh parsley.",
@@ -121,7 +141,7 @@
       "quantity": 1
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Soda",
       "price": 1.99,
       "description": "A refreshing carbonated drink available in various flavors.",
@@ -130,7 +150,7 @@
       "quantity": 1
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Icecream",
       "price": 8.99,
       "description": "Delicious icecream with sprincles",
@@ -139,7 +159,7 @@
       "quantity": 1
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Bacon burger",
       "price": 8.99,
       "description": "Baconburger with pickles and cheese",
@@ -148,7 +168,7 @@
       "quantity": 1
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Smoothe",
       "price": 8.99,
       "description": "Kiwismoothie",
@@ -157,7 +177,7 @@
       "quantity": 1
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Sallad Burger",
       "price": 8.99,
       "description": "No bread only sallad",
@@ -166,7 +186,7 @@
       "quantity": 1
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Vanilla Shake",
       "price": 8.99,
       "description": "Worlds best vanilla milkshake",
@@ -175,7 +195,7 @@
       "quantity": 1
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Passion fruit drink",
       "price": 8.99,
       "description": "Refreshing passionfruit drink",
