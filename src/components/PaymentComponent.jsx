@@ -98,7 +98,7 @@ function PaymentComponent({ user }) {
 
   const handlePaymentSuccess = () => {
     clearCart();
-    navigate("/confirmationpage");
+    navigate("/conformationpage");
   };
 
   const clearCart = () => {
