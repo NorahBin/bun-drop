@@ -33,7 +33,7 @@ body {
   margin-top: 2%;
   margin-left: 5%;
   border-radius: 20px;
-  border: 6px solid #fff797;
+  border: 6px solid #29c1db;
 }
 
 .navbar-logo {
@@ -359,10 +359,10 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 20px;
-  height: 50vh;
+  height: 62vh;
   width: 60vh;
   background-color: white;
-  border: #29c1db solid 5px;
+  border: #29c1db solid 8px;
 }
 
 /* Avnänds inte */
@@ -726,6 +726,28 @@ body {
   margin-bottom: 5%;
   margin-top: 3%;
 }
+
+.cart-pay-button:disabled {
+  background-color: #cccccc; 
+  color: #666666; 
+  cursor: not-allowed; 
+  
+}
+
+.no-items-in-cart{
+  text-align: center;
+  font-family: "Lato";
+  font-weight: 900;
+}
+
+.add-items-to-your-cart{
+  text-align: center;
+  font-size: 130%;
+  color: rgb(44, 44, 44);
+}
+
+
+
 
 /* *-------------------------------------------* */
 /* paymentcomponent.jsx */
