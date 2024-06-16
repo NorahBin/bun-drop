@@ -33,7 +33,7 @@
       "price": 9.99,
       "description": "A juicy beef burger with melted cheese, lettuce, and tomato.",
       "category": "burgers",
-      "image": "/src/images/cheeseburger.png",
+      "image": "/src/images/cheeseburger1.jpg",
       "quantity": 1
     },
     {
@@ -144,6 +144,11 @@
       "id": "0985",
       "name": "",
       "password": ""
+    },
+    {
+      "id": "e1d8",
+      "name": "norah",
+      "password": "password"
     }
   ],
   "mostPopular": [
