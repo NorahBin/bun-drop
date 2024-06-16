@@ -1,3 +1,5 @@
+
+
 import React, { useState, useEffect } from "react";
 import { GiHamburger } from "react-icons/gi";
 import { RiDrinks2Fill } from "react-icons/ri";
@@ -67,7 +69,6 @@ const addToCart = (item) => {
   userOrderCarts[cartKey] = userCart;
   localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
 };
-
 
   const filteredItems = menuItems.filter((item) => {
     if (filter === "all") return true;
@@ -173,4 +174,3 @@ const addToCart = (item) => {
 }
 
 export default MenuComponent;
-

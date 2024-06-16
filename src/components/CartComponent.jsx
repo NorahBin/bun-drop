@@ -104,7 +104,11 @@ function CartComponent({ user }) {
                 <div className="order-price-container">
                   <h1 className="order-name">{item.title}</h1>
                   <h2>{item.name}</h2>
-                  <p>{item.price * item.quantity}</p>
+                  <p className="order-price-cart">
+                    {(
+                      parseFloat(item.price).toFixed(2) * item.quantity
+                    ).toFixed(2)}
+                  </p>
                 </div>
                 <button
                   className="order-delete-button"

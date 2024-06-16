@@ -158,7 +158,7 @@ function PaymentComponent({ user }) {
         </h2>
         {showCardInputs && (
           <div className="card-payment">
-            <div className="input-container">
+            <div className="checkout-input-container">
               <div className="input-row">
                 <input
                   type="text"

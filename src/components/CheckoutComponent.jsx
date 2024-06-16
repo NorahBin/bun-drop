@@ -41,7 +41,9 @@ function CheckoutComponent({ user }) {
             <div className="checkout-name-price-container">
               <h1 className="checkout-name">{item.title}</h1>
               <h2>{item.name}</h2>
-              <p className="checkout-price">{item.price * item.quantity}</p>
+              <p className="checkout-price">
+                {(parseFloat(item.price).toFixed(2) * item.quantity).toFixed(2)}
+              </p>{" "}
             </div>
             <div className="checkout-first-grey-line"></div>
           </div>

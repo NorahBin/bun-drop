@@ -11,7 +11,7 @@
 
 html,
 body {
-  height: 100%; /* Ensure body takes up the full height */
+  height: 100%; 
 }
 
 body {
@@ -565,7 +565,7 @@ body {
 
 /* Avnänds inte */
 .menu-text-container h1 {
-  margin-right: 20px; /* Adjust this value to add space between h1 elements and white lines */
+  margin-right: 20px;
 }
 
 .menu-burger-pic {
@@ -626,6 +626,135 @@ body {
 .menu-price-text {
   font-weight: bold;
 }
+
+
+@media (max-width: 391px) {
+  .menu-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .red-menu {
+    margin-top: 30px;
+    height: 80px;
+    width: 85vw;
+    background-color: #d31d21;
+    border-radius: 15px;
+    margin-right: 5%;
+  }
+
+  .menu-text-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-evenly; 
+    color: white;
+    font-family: "Black Han Sans";
+    font-size: 18px; 
+  }
+
+  .menu-all-button,
+  .menu-burger-button,
+  .menu-sides-button,
+  .menu-drink-button,
+  .menu-dessert-button {
+    font-size: 18px; 
+    color: white;
+    background-color: #d31d21;
+    border: none;
+    padding: 8px 12px; 
+    margin-top: 10px; 
+  }
+
+  .yellow-active {
+    color: #fff797;
+  }
+
+  .white-line {
+    height: 50px;
+    width: 3px;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 5px;
+  }
+
+  .menu-card-container {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 3%;
+    gap: 20px;
+    width: 100vw;
+  }
+
+  .menu-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 62vh;
+    width: 60vh;
+    background-color: white;
+    border: #29c1db solid 8px;
+  }
+
+  .menu-description {
+    font-family: "Lato";
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .red-line {
+    background-color: #d31d21;
+    width: 50%;
+    height: 2px;
+  }
+
+  .menu-red-line {
+    background-color: #d31d21;
+    width: 50%;
+    height: 0.6vh;
+    border-radius: 30px;
+  }
+
+  .menu-order-button {
+    margin-left: 80px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    margin-right: 100px;
+    height: 5vh;
+    width: 7.5vw;
+    margin-top: 4%;
+    background-color: #d31d21;
+    color: #fff797;
+    font-size: 1.5vw;
+    font-family: "Black Han Sans";
+  }
+
+  .menu-text-title {
+    font-family: "Black Han Sans";
+    font-size: 2vw;
+    color: black;
+    border: none;
+    margin-top: -10%;
+  }
+
+  .menu-price-container {
+    display: flex;
+    font-family: "Lato";
+    font-size: 1.3rem;
+    gap: 10px;
+  }
+
+  .menu-price {
+  }
+
+  .menu-price-text {
+    font-weight: bold;
+  }
+}
+
+
 
 /* *-------------------------------------------* */
 
@@ -735,18 +864,7 @@ body {
   font-size: 1.5rem;
 }
 
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-  .order-name {
-    font-size: 1.2rem; /* Adjust the font size for smaller screens */
-  }
-}
 
-@media (max-width: 480px) {
-  .order-name {
-    font-size: 1rem; /* Further adjust the font size for even smaller screens */
-  }
-}
 
 .cart-total-price-container {
   display: flex;
@@ -814,50 +932,148 @@ body {
 
 
 @media (max-width: 391px) {
-  .navbar {
-    display: flex;
-    align-items: center;
-    height: 100px;
-    width: 92%;
-    margin: 0;
-    padding: 10px;
-    border-radius: 0;
-  }
+.order-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+  margin-top: 10%;
+}
 
-  .navbar-logo {
-    margin: 0;
-    height: 50px;
-    margin-bottom: 10px;
-  }
+.order-box {
+  /* width: 800px; */
+  width: 80vw;
+  border: #29c1db solid 5px;
+  background-color: white;
+  border-radius: 20px;
+}
 
-  .navbar-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    gap: 1px;
-  }
+.order-title {
+  text-align: center;
+  margin-top: 6%;
+  font-size: 30px;
+  font-family: "Black Han Sans";
+}
 
-  .menu-text,
-  .favorites-text,
-  .cart-text,
-  .home-text {
-    font-size: 20px;
-    margin: 5px 0;
-  }
+.red-line-orders {
+  margin-left: 40%;
+  background-color: #d31d21;
+  height: 5px;
+  width: 20%;
+  border-radius: 20px;
+  margin-top: -1%;
+  margin-bottom: 3%;
+}
 
-  .sign-in {
-    margin: 10px 0;
-    height: 35px;
-    width: 100px;
-    font-size: 20px;
-  }
+.order-item-container {
+  display: flex;
+  padding-left: 13%;
+  margin-top: 1%;
+  flex-wrap: wrap;
+}
 
-  .navlink {
-    width: 100%;
-    text-align: center;
-    padding: 5px 0;
-  }
+/* .order-name {
+  font-family: "Lato";
+  font-size: 1.5rem;
+} */
+
+.order-delete-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7%;
+  border: none;
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin-left: 4%;
+  margin-right: 16%;
+}
+
+/* .order-delete-button{
+
+    width: 6%;
+  border:none;
+  background-color:lightgrey;
+  border-radius: 10px;
+  margin-left: 4%;
+  margin-right: 16%;
+
+} */
+
+.order-name {
+  font-family: "Lato";
+  font-size: 14px;
+}
+
+
+
+.cart-total-price-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 8%;
+  justify-content: flex-end;
+  padding-bottom: 10%;
+  margin-left: 20px;
+  /* margin-left: 460px; */
+  /* margin-left: 63%; */
+}
+
+.cart-total-price-title {
+  font-weight: bold;
+  font-size: 17px;
+  font-family: "Lato";
+}
+
+.order-price-cart{
+  font-size: 14px;
+}
+
+.cart-price {
+  font-size: 17px;
+  margin-top: 1px;
+}
+
+.order-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.order-quantity {
+  width: 7%;
+  border: none;
+  background-color: lightgrey;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 3%;
+}
+
+.order-grey-line {
+  width: 64%;
+  height: 3px;
+  background-color: rgba(195, 195, 195, 0.3);
+  margin-top: 2%;
+  margin-left: 11%;
+}
+
+.delete-icon {
+  font-size: 24px;
+  text-align: center;
+}
+
+.cart-pay-button {
+  border: none;
+  border-radius: 10px;
+  height: 23px;
+  width: 30%;
+  background-color: #d31d21;
+  color: #fff797;
+  font-size: 15px;
+  font-family: "Black Han Sans";
+  margin-right: 14%;
+}
 }
 
 /* *-------------------------------------------* */
@@ -889,10 +1105,10 @@ body {
 }
 
 .redline-checkout {
-  margin-left: 38%; /* Adjusted for responsiveness */
-  margin-right: 10%; /* Adjusted for responsiveness */
+  margin-left: 38%; 
+  margin-right: 10%; 
   border-radius: 10px;
-  width: 80%; /* Adjusted for responsiveness */
+  width: 80%; 
   max-width: 200px;
   height: 4px;
   background-color: #d31d21;
@@ -901,13 +1117,14 @@ body {
 
 .checkout-item-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap to the next line */
-  padding: 10px; /* Adjusted for smaller screens */
+  flex-wrap: wrap; 
+  padding: 10px; 
 }
 
 .checkout-quantity {
-  width: 4%; /* Adjusted for smaller screens */
-  margin-bottom: 5px; /* Added to create space between items */
+  width: 4%; 
+
+  margin-bottom: 5px; 
   margin-left: 10%;
   margin-right: 2%;
   text-align: center;
@@ -933,14 +1150,16 @@ body {
   bottom: 10%;
   font-family: "Lato";
   color: rgba(51, 53, 54, 1);
+  font-size: 20px;;
 }
 
 .checkout-price {
   justify-content: space-between;
+  font-size: 20px;
 }
 
 .checkout-first-grey-line {
-  width: 64%; /* Or any other styles you need */
+  width: 64%; 
   height: 3px;
   background-color: rgba(195, 195, 195, 0.3);
   margin-left: 16%;
@@ -951,7 +1170,7 @@ body {
   display: flex;
   gap: 20px;
   margin-top: 10px;
-  margin-left: 63%;
+  margin-left: 66%;
   /* margin-left: 460px; */
   /* margin-left: 63%; */
 }
@@ -989,6 +1208,150 @@ body {
   text-align: center;
   font-size: 130%;
   color: rgb(44, 44, 44);
+}
+
+
+@media (max-width: 391px) {
+.checkout-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+  padding-bottom: 2%;
+}
+
+.checkout-items-container {
+  /* width: 800px; */
+  width: 80vw;
+  max-width: 800px;
+
+  border: #29c1db solid 5px;
+  background-color: white;
+  border-radius: 20px;
+  margin-bottom: 200px;
+}
+
+ 
+
+.checkout-text {
+  text-align: center;
+  margin-top: 6%;
+  font-size: 30px;
+  font-family: "Black Han Sans";
+}
+
+
+
+.redline-checkout {
+  margin-left: 34%; 
+  margin-right: 10%;
+  border-radius: 20px;
+  width: 33%; 
+  max-width: 200px;
+  height: 5px;
+  background-color: #d31d21;
+  margin-bottom: 2%;
+}
+
+
+
+.checkout-item-container {
+  display: flex;
+  flex-wrap: wrap; 
+  padding: 10px; 
+}
+
+.checkout-quantity {
+  width: 7%; 
+  margin-bottom: 5px; 
+  margin-left: 10%;
+  margin-right: 3%;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: lightgray;
+  border: none;
+  pointer-events: none;
+}
+
+
+
+.checkout-name-price-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  margin-right: 20%;
+}
+
+.checkout-name {
+  position: relative;
+  bottom: 10%;
+  font-family: "Lato";
+  color: rgba(51, 53, 54, 1);
+  font-size: 14px;
+}
+
+.checkout-price {
+  justify-content: space-between;
+  font-size: 14px;
+  margin-right: -20px
+}
+
+.checkout-first-grey-line {
+  width: 73%; 
+  height: 3px;
+  background-color: rgba(195, 195, 195, 0.3);
+  margin-left: 16%;
+  border-radius: 10px;
+}
+
+.checkout-total-price-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  margin-left: 55%;
+  /* margin-left: 460px; */
+  /* margin-left: 63%; */
+}
+
+.checkout-total-price-title {
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.checkout-price-text {
+  font-family: "Lato";
+  font-size: 17px;
+  margin-left: -10px;
+}
+
+.checkout-pay-container {
+  margin-left: 7%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+.cart-pay-button:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+.no-items-in-cart {
+  text-align: center;
+  font-family: "Lato";
+  font-weight: 900;
+}
+
+.add-items-to-your-cart {
+  text-align: center;
+  font-size: 130%;
+  color: rgb(44, 44, 44);
+}
+
 }
 
 /* *-------------------------------------------* */
@@ -1081,7 +1444,7 @@ body {
 
 .swish-error-text {
   color: red;
-  font-size: 10px;
+  font-size: 13px;
   margin-left: 8%;
 }
 
@@ -1090,7 +1453,7 @@ body {
   height: 3px;
   background-color: rgba(195, 195, 195, 0.3);
   margin-top: 2%;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 .checkout-card-container {
@@ -1142,6 +1505,14 @@ body {
   gap: 10px;
 }
 
+.checkout-input-container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Lato";
+  gap: 2px;
+  margin-left: 40px;
+}
+
 .card-input,
 .cardholder-input,
 .date-input,
@@ -1179,6 +1550,224 @@ body {
   margin-left: 1%;
 }
 
+
+@media (max-width: 391px) {
+
+  .pay-checkout-container {
+    margin-left: 7%;
+    margin-bottom: 5%;
+    margin-top: 3%;
+  }
+
+  .payment-text {
+    font-family: "Lato";
+    font-size: 17px;
+    color: rgba(51, 53, 54, 1);
+    font-weight: 550;
+    margin-top: -30px;
+  }
+
+  .payment-margin {
+    margin-left: 2%;
+    margin-bottom: 10px;
+  }
+
+  .checkout-pay-box {
+    width: 80%;
+    border: rgba(195, 195, 195, 0.3) solid 3px;
+    border-radius: 10px;
+    padding: 2%;
+  }
+
+  .swish-container {
+    display: flex;
+    margin-top: 4%;
+    margin-bottom: 10px;
+  }
+
+  .checkout-circle-button {
+    width: 15px;
+    height: 15px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+    margin: 0 10px;
+  }
+
+  .checkout-circle-button.selected {
+    border: 5px solid rgba(51, 53, 54, 1);
+  }
+
+  .swish-text {
+    padding-right: 2%;
+    font-family: "Lato";
+    font-size: 14px;
+    color: rgba(51, 53, 54, 1);
+    margin-top: -0.5%;
+    font-weight: 400;
+  }
+
+  .swish-input-button {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .swish-input {
+    margin-left: 16%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    height: 18px;
+    border: lightgrey solid 2px;
+    width: 168px;
+  }
+
+  .swish-button {
+    margin-top: 10px;
+    height: 20px;
+    width: 171px;
+    background-color: #d31d21;
+    color: #fff797;
+    font-size: 14px;
+    font-family: "Black Han Sans";
+    border: none;
+    border-radius: 5px;
+    margin-right: -5px;
+    margin-left: 33px;
+    margin-bottom: 10px;
+  }
+
+  .swish-error-text {
+    color: red;
+    font-size: 11px;
+    margin-left: 15%;
+    margin-top: 2px;
+  }
+
+  .checkout-grey-line {
+    width: 90%;
+    height: 3px;
+    background-color: rgba(195, 195, 195, 0.3);
+    margin-top: 2%;
+    margin-left: 5%;
+  }
+
+  .checkout-card-container {
+    display: flex;
+    margin-top: 4%;
+  }
+
+  .card-text {
+    font-family: "Lato";
+    font-size: 14px;
+    color: rgba(51, 53, 54, 1);
+    margin-top: -0.5%;
+    font-weight: 400;
+  }
+
+  .pay-swish-text {
+    padding-right: 2%;
+    font-family: "Lato";
+    font-size: 12px;
+    color: rgb(88, 89, 90);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 400;
+  }
+
+  .swish-payment-margin {
+    margin-left: 16%;
+  }
+
+  .card-payment {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 5%;
+  }
+
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 8%;
+    padding-top: 1%;
+  }
+
+  .input-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .card-input,
+  .cardholder-input,
+  .date-input,
+  .cvv-input {
+     width: 100%; /* Adjusted from 104% to 100% */
+    max-width: 168px; /* Set a max-width to match the swish-input width */
+    height: 18px;
+    margin-bottom: 3%;
+    border: lightgrey solid 2px;
+    margin-left: -6px;
+  }
+
+  .card-pay-button {
+    /* margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 30px;
+    background-color: #d31d21;
+    color: #fff797;
+    font-size: 16px;
+    font-family: "Black Han Sans";
+    border: none;
+    border-radius: 10px; */
+
+
+     margin-top: 4%;
+        margin-left: -5px;
+        margin-right: auto;
+        width: 100%;
+        height: 20px;
+        background-color: #d31d21;
+        color: #fff797;
+        font-size: 16px;
+        font-family: "Black Han Sans";
+        border: none;
+        border-radius: 5px; 
+  }
+
+  .input-error-text,
+  .card-number-error-text,
+  .card-name-error-text,
+  .date-error-text,
+  .cvv-error-text {
+   display: block;  
+    width: 100%; 
+    max-width: 168px; 
+    color: red;
+    font-size: 10px;
+    margin-top: 2%;
+    margin-left: -5%; 
+  }
+
+  .error-text-container {
+    margin-top: 2%;
+    margin-left: 1%;
+  }
+
+  .checkout-input-container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Lato";
+    gap: 2px;
+    margin-left: 40px;
+  }
+}
+
+
 /* *-------------------------------------------* */
 
 /* Sign-up/sign in */
@@ -1186,7 +1775,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 75vh; /* Full height of the viewport */
+  height: 75vh; 
 }
 
 .auth-box {
@@ -1269,6 +1858,109 @@ body {
   font-size: 1.2rem;
   color: rgba(41, 193, 219, 1);
   transition: color 0.3s ease; /* Smooth color transition on hover */
+
+}
+
+
+
+@media (max-width: 391px) {
+
+  .auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 300px;
+  background-color: white;
+  border: #29c1db solid 5px;
+  border-radius: 20px;
+  margin-top: -63%;
+}
+
+.auth-text {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 30px;
+  font-family: "Black Han Sans";
+}
+
+.auth-redline {
+  width: 25%;
+  border-radius: 20px;
+  background-color: #d31d21;
+  height: 5px;
+  margin-top: 0.3;
+
+}
+
+
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+  font-family: "Lato";
+  gap: 2px;
+}
+
+.input-text {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.input-field {
+  height: 3vh;
+  width: 50vw;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-button {
+  text-align: center;
+  margin-top: 7%;
+  height: 3vh;
+  width: 110px;
+  background-color: #d31d21;
+  color: #fff797;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 3px 20px 0px 20px; /* top right bottom left */
+  font-family: "Black Han Sans";
+  margin-left: 15px;
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  margin-left: 13px;
+}
+
+.link:hover .link-text {
+  text-decoration: underline;
+}
+
+.link-text {
+  font-family: "Lato";
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: rgba(41, 193, 219, 1);
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+
+}
+
 }
 
 /* *-------------------------------------------* */
