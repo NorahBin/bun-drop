@@ -160,7 +160,7 @@ const addToCart = (item) => {
                 </button>
 
                 {user && (
-                  <button onClick={() => addToFavorites(item)}>
+                  <button className="add-to-favorites-button" onClick={() => addToFavorites(item)}>
                     Add to favorites
                   </button>
                 )}
