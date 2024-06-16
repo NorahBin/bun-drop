@@ -26,7 +26,6 @@ body {
 
 /* Navbar.jsx */
 
-/* General styles */
 .navbar {
   background-color: #29c1db;
   height: 16vh;
@@ -55,17 +54,16 @@ body {
 .favorites-text,
 .cart-text,
 .home-text {
-  font-size: 30px;
+  font-size: 40px;
   font-family: "Black Han Sans";
 }
 
 .sign-in {
   border: none;
   border-radius: 10px;
-  margin-right: 100px;
   height: 40px;
   width: 200px;
-  margin-top: 35px;
+  margin-top: 40px;
   background-color: #d31d21;
   color: #fff797;
   font-size: 30px;
@@ -189,7 +187,7 @@ body {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
-    margin-bottom: 250px;
+    margin-bottom: 80px;
   }
   .card {
     display: flex;
@@ -548,7 +546,8 @@ body {
   display: flex;
   margin-top: 3%;
   gap: 20px;
-  width: 100vw;
+  width: 90vw;
+  padding-bottom: 30px
 }
 
 .menu-card {
@@ -635,17 +634,18 @@ body {
   }
 
   .red-menu {
-    margin-top: 30px;
-    height: 80px;
-    width: 85vw;
+    margin-top: 20px;
+    height: 146px;
+    width: 90vw;
     background-color: #d31d21;
     border-radius: 15px;
-    margin-right: 5%;
+    margin-right: 1%;
   }
 
   .menu-text-container {
     margin-top: 10px;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly; 
     color: white;
     font-family: "Black Han Sans";
@@ -661,8 +661,12 @@ body {
     color: white;
     background-color: #d31d21;
     border: none;
-    padding: 8px 12px; 
-    margin-top: 10px; 
+    /* padding: 8px 12px;  */
+    /* margin-top: 10px;  */
+  }
+
+  .menu-sides-button{
+    margin-top: 0.5px;
   }
 
   .yellow-active {
@@ -675,14 +679,16 @@ body {
     background-color: white;
     border-radius: 10px;
     margin-top: 5px;
+    display: none;
   }
 
   .menu-card-container {
     flex-wrap: wrap;
     display: flex;
-    margin-top: 3%;
     gap: 20px;
-    width: 100vw;
+    width: 95vw;
+    margin-top: 30px;
+    padding-bottom: 30px;
   }
 
   .menu-card {
@@ -691,29 +697,31 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 20px;
-    height: 62vh;
-    width: 60vh;
+    height:40vh;
+    width:40vh;
     background-color: white;
-    border: #29c1db solid 8px;
+    border: #29c1db solid 5px;
   }
 
   .menu-description {
     font-family: "Lato";
     font-size: 1.2rem;
     text-align: center;
+    margin-bottom: 4px;
   }
-
+/* 
   .red-line {
     background-color: #d31d21;
     width: 50%;
     height: 2px;
-  }
+  } */
 
   .menu-red-line {
     background-color: #d31d21;
     width: 50%;
-    height: 0.6vh;
+    height: 6px;
     border-radius: 30px;
+    margin-bottom: 4px;
   }
 
   .menu-order-button {
@@ -722,21 +730,21 @@ body {
     border: none;
     border-radius: 10px;
     margin-right: 100px;
-    height: 5vh;
-    width: 7.5vw;
-    margin-top: 4%;
+    height: 33px;
+    width: 102px;
+    margin-top: 10px;
     background-color: #d31d21;
     color: #fff797;
-    font-size: 1.5vw;
+    font-size: 16px;
     font-family: "Black Han Sans";
   }
 
   .menu-text-title {
     font-family: "Black Han Sans";
-    font-size: 2vw;
+    font-size: 23px;
     color: black;
     border: none;
-    margin-top: -10%;
+    margin-top: -5%;
   }
 
   .menu-price-container {
@@ -752,6 +760,33 @@ body {
   .menu-price-text {
     font-weight: bold;
   }
+
+  .hamburger-icon {
+  font-size: 45px;
+  display: none;
+}
+
+.sides-icon {
+  font-size: 45px;
+  display: none;
+}
+
+.drink-icon {
+  font-size: 45px;
+  margin-top: 0.5%;
+  display: none;
+}
+
+.dessert-icon {
+  font-size: 60px;
+  margin-top: -0.5%;
+  display: none;
+}
+
+.menu-burger-pic {
+  height: 60%;
+  width: 60%;
+}
 }
 
 
