@@ -1,7 +1,5 @@
 
 
-
-
 import React from "react";
 import bundrop from "../images/bundrop.png";
 import { NavLink } from "react-router-dom";
