@@ -10,23 +10,59 @@ function ConfirmationComponent({ user }) {
     : userOrderCarts[tempUserKey] || [];
 
   const [cartItems, setCartItems] = useState(initialCartItems);
+  const [deliveryTime, setDeliveryTime] = useState(null);
+
+  useEffect(() => {
+    // Generate a random delivery time between 20 to 45 minutes
+    const minMinutes = 20;
+    const maxMinutes = 45;
+    const randomDeliveryTime = Math.floor(
+      Math.random() * (maxMinutes - minMinutes + 1) + minMinutes
+    );
+    setDeliveryTime(randomDeliveryTime);
+  }, []);
+
+  // Function to calculate total price
+  const totalPrice = cartItems
+    .reduce((total, item) => total + item.price * item.quantity, 0)
+    .toFixed(2);
 
   return (
     <div className="confirmation-container">
-      <div className="confirmation-box">
-        <div className="order-confirmation-title">
-          <h1>Order Confirmation</h1>
-          <p>
-            Thank you for your order! Your order has been successfully placed.
-          </p>
-        </div>
-        <h1>Order Details</h1>
+      <div className="confirmation-items-container">
+        <h1 className="order-confirmation-text">Order Confirmation</h1>
+        <div className="confirmation-red-line"></div>
+
+        <h1 className="order-details-text">Order Details</h1>
+        <h2 className="thank-you-text">Thanks for ordering!</h2>
+
         {cartItems.map((item, index) => (
-          <div key={index}>
-            {item.name} x{item.quantity}
-            {item.name} {item.title}
+          <div className="confirmation-item-container" key={index}>
+            <div className="confirmation-quantity">
+              {item.name} {item.quantity}x
+            </div>
+            <div className="confirmation-price-name-container">
+              <div className="confirmation-item-name">
+                {item.name} {item.title}
+              </div>
+              <p className="confirmation-price">
+                {(parseFloat(item.price).toFixed(2) * item.quantity).toFixed(2)}
+              </p>
+            </div>
+            <div className="confirmation-grey-line"></div>
           </div>
         ))}
+        <div className="confirmation-total-price-container">
+          <div className="confirmation-total-price-title">Total:</div>
+          <div className="conformation-price-text">{totalPrice}</div>
+        </div>
+
+        {deliveryTime && (
+          <div className="delivery-time-message">
+          Estimated delivery time: {deliveryTime}{" "}
+            minutes.
+          </div>
+        )}
       </div>
     </div>
   );
