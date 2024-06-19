@@ -24,7 +24,6 @@ body {
 
 /* Navbar.jsx */
 
-/* Navbar.jsx */
 
 .navbar {
   background-color: #29c1db;
@@ -83,6 +82,9 @@ body {
   outline: none;
   text-decoration: underline;
 }
+
+
+
 
 @media (max-width: 391px) {
   .navbar {
@@ -2409,7 +2411,7 @@ font-family: "Lato";
 }
 
 
-/* @media (max-width: 768px) {
+ /* @media (max-width: 768px) {
   .order-confirmation-text {
     font-size: 2em;
   }
@@ -2425,7 +2427,7 @@ font-family: "Lato";
   .confirmation-items-container {
     width: 100%;
   }
-} */
+}  */
 
 
 
@@ -2535,9 +2537,9 @@ body {
 }
 
 .quantity-input__modifier {
-  padding: 0.2rem; /* Further reduced padding */
-  width: 1.5rem; /* Further reduced width */
-  font-size: 0.8rem; /* Further reduced font size */
+  padding: 0.2rem; 
+  width: 1.5rem;
+  font-size: 0.8rem; 
   background: #f3f3f3;
   color: #888;
   border: 0 solid #dbdbdb;
@@ -2617,7 +2619,7 @@ body {
 } */
 
 .checkout-circle-button.active {
-  border: 6px solid rgba(51, 53, 54, 1); /* Adjust as needed */
+  border: 6px solid rgba(51, 53, 54, 1); 
 }
 
 .card-input {
