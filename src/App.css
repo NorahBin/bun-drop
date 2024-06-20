@@ -25,48 +25,74 @@ body {
 /* Navbar.jsx */
 
 
+
 .navbar {
+  
   background-color: #29c1db;
-  height: 16vh;
-  width: 185vh;
+  height: auto;
+  width: 90%;
   display: flex;
   justify-content: space-between;
-  margin-top: 2%;
+  align-items: center;
   margin-left: 5%;
   border-radius: 20px;
+  margin-top: 2%;
   border: 6px solid #29c1db;
 }
 
+/* 
+.navbar {
+  
+  background-color: #29c1db;
+  height: auto;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  border: 6px solid #29c1db;
+} */
+
 .navbar-logo {
-  margin: 5px;
-  margin-bottom: 50px;
-  height: 80%;
-  margin-left: 70px;
+  /* height: 80%; */
+  width: 10vw;
+  max-height: 80px;
+  margin-left: 50px;
 }
 
-.navbar-text {
+.navbar-links {
+  display: flex;
+  font-family: "Black Han Sans";
+  font-size: 2.5vw;
+margin-top: 1%;
   gap: 20px;
-  margin: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .menu-text,
 .favorites-text,
 .cart-text,
 .home-text {
-  font-size: 40px;
+  font-size: 1.5rem;
   font-family: "Black Han Sans";
+  margin: 0;
 }
 
 .sign-in {
   border: none;
   border-radius: 10px;
-  height: 40px;
-  width: 200px;
-  margin-top: 40px;
+  height: 5vh;
+  width: 9vw;
   background-color: #d31d21;
   color: #fff797;
-  font-size: 30px;
+  font-size: 1.5vw;
   font-family: "Black Han Sans";
+}
+.sign-in:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 .navlink {
@@ -82,7 +108,6 @@ body {
   outline: none;
   text-decoration: underline;
 }
-
 
 
 
@@ -159,7 +184,7 @@ body {
   height: 60vh;
   width: 60vh;
   background-color: white;
-  border: #29c1db solid 5px;
+  border: #29c1db solid 8px;
 }
 
 .burger-pic {
@@ -240,18 +265,19 @@ body {
 /* LandingPageComponent.jsx */
 
 .most-popular-container {
-  margin-top: 0.5%;
+  margin-top: 2%;
   margin-left: 50px;
 }
 
 .most-popular-text {
   font-family: "Black Han Sans";
   font-weight: 900;
-  font-size: 380%;
+  font-size: 4vw;
   margin-left: 10%;
 }
 
 .stripes-image {
+  width: 6vw;
 }
 
 .red-line-most-popular {
@@ -280,7 +306,7 @@ body {
 }
 
 .left-arrow {
-  left: 2.5%;
+  left: 2%;
 }
 
 .previous-button {
@@ -290,7 +316,7 @@ body {
   background-color: #d31d21;
 
   border-radius: 50%;
-  margin-left: 1%;
+  margin-left: 2%;
 }
 
 .arrow-icon {
@@ -300,7 +326,7 @@ body {
 }
 
 .right-arrow {
-  right: 4%;
+  right: 3%;
 }
 
 .next-button {
@@ -447,10 +473,9 @@ body {
 .red-menu {
   margin-top: 30px;
   height: 80px;
-  width: 85vw;
+  width: 90vw;
   background-color: #d31d21;
   border-radius: 15px;
-  margin-right: 5%;
 }
 
 .menu-text-container {
@@ -475,7 +500,7 @@ body {
 
 .menu-all-button {
   font-family: "Black Han Sans";
-  font-size: 35px;
+  font-size: 2.5vw;
   color: white;
   background-color: #d31d21;
   border: none;
@@ -484,7 +509,7 @@ body {
 
 .menu-burger-button {
   font-family: "Black Han Sans";
-  font-size: 35px;
+  font-size: 2.5vw;
   color: white;
   background-color: #d31d21;
   border: none;
@@ -492,7 +517,7 @@ body {
 
 .menu-sides-button {
   font-family: "Black Han Sans";
-  font-size: 35px;
+  font-size: 2.5vw;
   color: white;
   background-color: #d31d21;
   border: none;
@@ -501,7 +526,7 @@ body {
 
 .menu-drink-button {
   font-family: "Black Han Sans";
-  font-size: 35px;
+  font-size: 2.5vw;
   color: white;
   background-color: #d31d21;
   border: none;
@@ -510,7 +535,7 @@ body {
 
 .menu-dessert-button {
   font-family: "Black Han Sans";
-  font-size: 35px;
+  font-size: 2.5vw;
   color: white;
   background-color: #d31d21;
   border: none;
@@ -522,7 +547,9 @@ body {
 }
 
 .white-line {
-  height: 50px;
+  /* height: 50px; */
+    height: 7vh;
+
   width: 3px;
   background-color: white;
   border-radius: 10px;
@@ -530,30 +557,31 @@ body {
 }
 
 .hamburger-icon {
-  font-size: 45px;
+  font-size: 3vw;
 }
 
 .sides-icon {
-  font-size: 45px;
+  font-size: 3vw;
 }
 
 .drink-icon {
-  font-size: 45px;
+  font-size: 3vw;
   margin-top: 0.5%;
 }
 
 .dessert-icon {
-  font-size: 60px;
+  font-size: 4vw;
   margin-top: -0.5%;
 }
 
 .menu-card-container {
   flex-wrap: wrap;
   display: flex;
-  margin-top: 3%;
+  margin-top: 3rem;
   gap: 20px;
   width: 90vw;
-  padding-bottom: 30px
+  padding-bottom: 30px;
+  justify-content: center;
 }
 
 .menu-card {
@@ -597,6 +625,7 @@ body {
 }
 
 .menu-order-button {
+  
   margin-left: 80px;
   border: none;
   border-radius: 10px;
@@ -608,6 +637,12 @@ body {
   color: #fff797;
   font-size: 1.5vw;
   font-family: "Black Han Sans";
+}
+
+.menu-order-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 .menu-text-title {
@@ -638,13 +673,20 @@ body {
     border-radius: 10px;
     margin-right: 100px;
     height: 5vh;
-    width: 300px;
+    width: 16vw;
+    
     margin-top: 4%;
     background-color: #d31d21;
     color: #fff797;
     font-size: 1.5vw;
     font-family: "Black Han Sans";
 
+}
+
+.add-to-favorites-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 
@@ -861,7 +903,7 @@ body {
 .order-box {
   /* width: 800px; */
   width: 50vw;
-  border: #29c1db solid 5px;
+  border: #29c1db solid 8px;
   background-color: white;
   border-radius: 20px;
 }
@@ -920,7 +962,7 @@ body {
 
 .order-name {
   font-family: "Lato";
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 
@@ -937,13 +979,12 @@ body {
 
 .cart-total-price-title {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 1.5vw;
   font-family: "Lato";
 }
 
 .cart-price {
-  font-size: 20px;
-  margin-top: 5px;
+  font-size: 1.5vw;
 }
 
 .order-price-container {
@@ -988,20 +1029,27 @@ body {
 }
 
 .delete-icon {
-  font-size: 24px;
+  font-size: 1.5vw;
   text-align: center;
 }
 
 .cart-pay-button {
+  margin-top: -3px;
   border: none;
   border-radius: 10px;
-  height: 30px;
-  width: 20%;
+  height: 2vw;
+  width: 10vw;
   background-color: #d31d21;
   color: #fff797;
-  font-size: 20px;
+  font-size: 1.3vw;
   font-family: "Black Han Sans";
   margin-right: 14%;
+}
+
+.cart-pay-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 
@@ -1166,24 +1214,22 @@ body {
   width: 60%;
   max-width: 800px;
 
-  border: #29c1db solid 5px;
+  border: #29c1db solid 8px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .checkout-text {
   text-align: center;
   margin-top: 4%;
-  font-size: 3.5rem;
+  font-size: 4vw;
   font-family: "Black Han Sans";
 }
 
 .redline-checkout {
   margin-left: 38%; 
-  margin-right: 10%; 
   border-radius: 10px;
-  width: 80%; 
-  max-width: 200px;
+  width: 14vw; 
   height: 1vh;
   background-color: #d31d21;
   margin-bottom: 2%;
@@ -1226,12 +1272,12 @@ body {
   bottom: 10%;
   font-family: "Lato";
   color: rgba(51, 53, 54, 1);
-  font-size: 20px;;
+  font-size: 1.5vw;
 }
 
 .checkout-price {
   justify-content: space-between;
-  font-size: 20px;
+  font-size: 1.2vw;
 }
 
 .checkout-first-grey-line {
@@ -1246,20 +1292,19 @@ body {
   display: flex;
   gap: 20px;
   margin-top: 10px;
-  margin-left: 65%;
-  /* margin-left: 460px; */
-  /* margin-left: 63%; */
+  margin-left: 62.5%;
+
 }
 
 .checkout-total-price-title {
   font-family: "Lato";
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .checkout-price-text {
   font-family: "Lato";
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .checkout-pay-container {
@@ -1441,7 +1486,7 @@ body {
 
 .payment-text {
   font-family: "Lato";
-  font-size: 26px;
+  font-size: 2vw;
   color: rgba(51, 53, 54, 1);
   font-weight: 550;
 }
@@ -1463,8 +1508,8 @@ body {
 }
 
 .checkout-circle-button {
-  width: 20px;
-  height: 20px;
+  width: 1.5vw;
+  height: 1.5vw;
   border: 1px solid lightgrey;
   border-radius: 50%;
   margin: 0 10px;
@@ -1487,7 +1532,7 @@ body {
 .swish-text {
   padding-right: 2%;
   font-family: "Lato";
-  font-size: 20px;
+  font-size: 1.3vw;
   color: rgba(51, 53, 54, 1);
   margin-top: -0.5%;
   font-weight: 400;
@@ -1502,20 +1547,28 @@ body {
   margin-left: 8%;
   margin-bottom: 1%;
   margin-top: 1%;
-  height: 25px;
+  height: 1.5vw;
+  width: 14vw;
   border: lightgrey solid 2px;
 }
 
 .swish-button {
-  margin-right: 30px;
-  width: 16%;
-  height: 30px;
+  margin-right: 6%;
+  width: 8vw;
+  height: 1.8vw;
   background-color: #d31d21;
   color: #fff797;
-  font-size: 16px;
+  font-size: 1.2vw;
   font-family: "Black Han Sans";
   border: none;
   border-radius: 10px;
+  margin-top: 1%;
+}
+
+.swish-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 .swish-error-text {
@@ -1539,7 +1592,7 @@ body {
 
 .card-text {
   font-family: "Lato";
-  font-size: 20px;
+  font-size: 1.3vw;
   color: rgba(51, 53, 54, 1);
   margin-top: -0.5%;
   font-weight: 400;
@@ -1548,7 +1601,7 @@ body {
 .pay-swish-text {
   padding-right: 2%;
   font-family: "Lato";
-  font-size: 15px;
+  font-size: 1vw;
   color: rgb(88, 89, 90);
   margin-top: 0.5%;
   margin-bottom: 2%;
@@ -1593,8 +1646,8 @@ body {
 .cardholder-input,
 .date-input,
 .cvv-input {
+  height: 1.8vw;
   width: 14vw;
-  height: 30px;
   margin-bottom: 3%;
   border: lightgrey solid 2px;
 }
@@ -1602,14 +1655,20 @@ body {
 .card-pay-button {
   margin-top: 2%;
   margin-left: 80%;
-  width: 16%;
-  height: 30px;
+  width: 8vw;
+  height: 1.8vw;
   background-color: #d31d21;
   color: #fff797;
-  font-size: 16px;
+  font-size: 1.2vw;
   font-family: "Black Han Sans";
   border: none;
   border-radius: 10px;
+}
+
+.card-pay-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 .input-error-text,
@@ -1618,7 +1677,7 @@ body {
 .date-error-text,
 .cvv-error-text {
   color: red;
-  font-size: 80%;
+  font-size: 0.8vw;
 }
 
 .error-text-container {
@@ -1912,10 +1971,17 @@ body {
   color: #fff797;
   border: none;
   border-radius: 10px;
-  font-size: 150%;
+  font-size: 1.5vw;
   padding: 3px 20px 0px 20px; /* top right bottom left */
   font-family: "Black Han Sans";
 }
+
+.auth-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
+}
+
 
 .link {
   text-decoration: none;
@@ -2044,20 +2110,20 @@ body {
 /* Favoritecomponent.jsx */
 
 .favorite-container {
-  margin-top: 0.5%;
+  margin-top: 2%;
   margin-left: 50px;
 }
 
 .favorite-title {
   font-family: "Black Han Sans";
   font-weight: 900;
-  font-size: 3.8em;
+  font-size: 4vw;
   margin-left: 10%;
 }
 
 .favorite-title-red-line {
   background-color: #d31d21;
-  width: 13%;
+  width: 15vw;
   height: 1vh;
   border-radius: 10px;
   margin-left: 13%;
@@ -2068,7 +2134,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   margin-top: 2%;
-  width: 90vw;
+  width: 92vw;
   padding-bottom: 30px;
   margin-left: 5%;
 }
@@ -2140,10 +2206,16 @@ body {
   color: #fff797;
   border: none;
   border-radius: 10px;
-  font-size: 1.5em;
+  font-size: 1.5vw;
   font-family: "Black Han Sans";
   padding: 3px 20px 0px 20px; /* top right bottom left */
   margin-top: 10px; 
+}
+
+.favorite-remove-button:hover {
+  border: 4px  solid #d31d21;;
+  background-color: #fff797; 
+  color: #d31d21;           
 }
 
 /* *-------------------------------------------* */
@@ -2159,18 +2231,19 @@ body {
 }
 
 .confirmation-items-container {
-  width: 90%;
-  max-width: 800px;
-  border: #29c1db solid 5px;
+  width: 50%;
+  /* width: 90%;
+  max-width: 800px; */
+  border: #29c1db solid 8px;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
 }
 
 .confirmation-red-line {
   margin: 0 auto;
   border-radius: 10px;
-  width: 55%;
+  width: 30vw;
   height: 1vh;
   background-color: #d31d21;
   margin-bottom: 1%;
@@ -2179,13 +2252,13 @@ body {
 .order-confirmation-text {
   text-align: center;
   margin-top: 4%;
-  font-size:3.5em;
+  font-size:4vw;
   font-family: "Black Han Sans", sans-serif;
 }
 
 .order-details-text {
   text-align: center;
-  font-size: 2.4em;
+  font-size: 2.5vw;
   font-family: "Lato";
   font-weight: 900;
 
@@ -2194,7 +2267,7 @@ body {
 .thank-you-text {
   text-align: center;
   margin-top: 0.2%;
-  font-size: 1.4em;
+  font-size: 1.3vw;
   font-family: "Arial", sans-serif;
   margin-bottom: 2%;
   font-weight: 100;
@@ -2244,7 +2317,7 @@ body {
   flex-grow: 1;
   flex-wrap: wrap;
   margin-right: 20%;
-  font-size: 20px;
+  font-size: 1.3vw;
   
 }
 
