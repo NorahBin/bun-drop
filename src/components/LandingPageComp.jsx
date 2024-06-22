@@ -23,7 +23,7 @@ function LandingPageComponent() {
 
   const handlePreviousClick = () => {
     setStartIndex((prevIndex) => Math.max(0, prevIndex - itemsPerPage));
-    setActiveIndex((prevIndex) => Math.max(1, prevIndex - 1)); // Ensure activeIndex doesn't go below 1
+    setActiveIndex((prevIndex) => Math.max(1, prevIndex - 1)); 
   };
 
   return (
