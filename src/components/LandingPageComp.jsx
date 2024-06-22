@@ -5,6 +5,7 @@ import React, { useState, useEffect } from "react";
 import LandingPageCards from "./LandingPageCards";
 import menuData from "/menu.json"; // Assuming menu.json is in the same directory
 import stripes from "../images/stripes.png";
+import stripespng from "../images/stripespng.png";
 
 function LandingPageComponent() {
   const [startIndex, setStartIndex] = useState(0);
@@ -30,7 +31,7 @@ function LandingPageComponent() {
       <div className="most-popular-container">
         <h2 className="most-popular-text">
           Most Popular{" "}
-          <img src={stripes} alt="Stripes" className="stripes-image" />
+          <img src={stripespng} alt="Stripes" className="stripespng-image" />
         </h2>
         <div className="red-line-most-popular"></div>
       </div>
