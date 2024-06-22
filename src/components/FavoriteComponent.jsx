@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import stripes from "../images/stripes.png";
+import stripespng from "../images/stripespng.png";
+
+
 
 function FavoriteComponent({ userId }) {
   const [favorites, setFavorites] = useState([]);
@@ -24,7 +27,8 @@ function FavoriteComponent({ userId }) {
       <div className="favorite-container">
         <h1 className="favorite-title">
           Favorites{" "}
-          <img src={stripes} alt="Stripes" className="stripes-image" />
+          <img src={stripespng} alt="Stripes" className="stripespng-image" />
+          {/* <img src={stripes} alt="Stripes" className="stripes-image" /> */}
         </h1>
         <div className="favorite-title-red-line"></div>
       </div>
