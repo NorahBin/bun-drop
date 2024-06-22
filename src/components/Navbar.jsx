@@ -6,6 +6,7 @@ function NavBar({ user, setUser }) {
   const handleSignOut = () => {
     // Set user to null to sign out
     setUser(null);
+    localStorage.removeItem("user"); // Add this line
   };
 
   let buttonText = user ? "Sign Out" : "Sign In";
