@@ -1,100 +1,33 @@
-// import React from "react";
-// import { useState } from "react";
 
-// function SignUpComponent() {
-//   const [name, setName] = useState("");
-//   const [password, setPassword] = useState(""); // Add state for password
-
-//   function handleNameChange(e) {
-//     setName(e.target.value);
-//   }
-
-
-
-//   function handlePasswordChange(e) {
-  
-//     setPassword(e.target.value);
-//   }
-
-//   function handleSubmitForm(e) {
-//     e.preventDefault();
-
-//     //Skicka vår nya user till en databas
-//     const postOptions = {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify({ name: name, password: password }), // Include password in the POST request
-//     };
-
-//     fetch("http://localhost:3000/users", postOptions);
-
-//     //Städa upp inputs
-//     setName("");
-//     setPassword(""); 
-//   }
-
-//   return (
-//     <>
-//       <div className="sign-up-container">
-//         <div className="sign-up-box">
-//           <h1 className="sign-up-text-title">Sign Up</h1>
-//           <div className="sign-up-redline"></div>
-
-//           <form onSubmit={handleSubmitForm}>
-//             <div className="sign-up-username-container">
-//               <h2>Username:</h2>
-//               <input
-//               className="sign-up-username-input"
-//                 type="text"
-//                 placeholder="Username"
-//                 onChange={handleNameChange}
-//                 value={name}
-//               />
-//             </div>
-
-//             <div className="sign-up-password-container">
-//               <h2>Password</h2>
-
-//               <input
-//               className="sign-up-password-input"
-//                 type="password"
-//                 placeholder="Password"
-//                 onChange={handlePasswordChange}
-//                 value={password}
-//               />
-//               <button className="register-button" type="submit">Register</button>
-//             </div>
-//           </form>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default SignUpComponent;
 import React, { useState } from "react";
 
 function SignUpComponent() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
+  //Funktion för att hantera name input change
   function handleNameChange(e) {
     setName(e.target.value);
   }
+
+  //Funktion för att hantera password input change
 
   function handlePasswordChange(e) {
     setPassword(e.target.value);
   }
 
   function handleSubmitForm(e) {
-    e.preventDefault();
+    e.preventDefault(); //prevents default form submission behaviour
 
+
+    //Skapar ett postOptions objekt för ett POST request
     const postOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: name, password: password }),
     };
 
+    //Skickar post request till server
     fetch("http://localhost:3000/users", postOptions);
 
     setName("");
