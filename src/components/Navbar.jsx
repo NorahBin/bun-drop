@@ -6,9 +6,10 @@ function NavBar({ user, setUser }) {
   const handleSignOut = () => {
     // Set user to null to sign out
     setUser(null);
-    localStorage.removeItem("user"); // Add this line
+    localStorage.removeItem("user"); //tar bort userdata från local storage så att usersession försvinner(loggas ut)
   };
 
+  //Bestämmer button text och action baserat på user authentication state
   let buttonText = user ? "Sign Out" : "Sign In";
   let buttonAction = user ? handleSignOut : null;
 
@@ -32,7 +33,7 @@ function NavBar({ user, setUser }) {
         >
           CART
         </NavLink>
-        {user && (
+        {user && ( //Renderas endast om user finns
           <NavLink
             to="/favoritepage"
             className="navlink"
@@ -59,4 +60,3 @@ function NavBar({ user, setUser }) {
 }
 
 export default NavBar;
-

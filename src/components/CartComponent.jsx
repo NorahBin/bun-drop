@@ -1,30 +1,44 @@
 import React, { useState, useEffect } from "react";
-import PayButtonComp from "./PayButtonComp";
-import { useNavigate } from "react-router-dom";
+import PayButtonComp from "./PayButtonComp"; 
+import { useNavigate } from "react-router-dom"; //Importerar usenavigatehook från react-router-dom
 import { MdDelete } from "react-icons/md";
 
 function CartComponent({ user }) {
   const navigate = useNavigate();
+
+  //Skapar key för temporary user
   const tempUserKey = "tempUser";
+
+  //Hämtar user id om det finns
   const userId = user?.id;
+
+  //Initialiserar cart items från local storage baserat på user id
   const initialCartItems = userId
     ? JSON.parse(localStorage.getItem("carts"))?.[userId] || []
     : JSON.parse(localStorage.getItem("carts"))?.[tempUserKey] || [];
+
+    //State variabel för cart items
   const [cartItems, setCartItems] = useState(initialCartItems);
 
+  
+  //Använder useffect för att uppdatera cart items när user id ändras
   useEffect(() => {
     if (userId) {
-      const carts = JSON.parse(localStorage.getItem("carts")) || {};
-      const userCart = carts[userId] || [];
-      setCartItems(userCart);
+      const carts = JSON.parse(localStorage.getItem("carts")) || {}; //Hämtar carts från local storaggr
+      const userCart = carts[userId] || []; //hämtar userns cart items
+      setCartItems(userCart); //Uppdaterar state med userns cart items
     }
-  }, [userId]);
+  }, [userId]); //Denna effekten körs när userId ändras
 
+   
+  //Använder useEffect för att uppdatera cart tems i local storage när cart item ändras
   useEffect(() => {
     const carts = JSON.parse(localStorage.getItem("carts")) || {};
     const userOrderCarts =
       JSON.parse(localStorage.getItem("userOrderCarts")) || {};
 
+
+      //Uppdaterar userns cart och user cart i local storage
     if (userId) {
       carts[userId] = cartItems;
       userOrderCarts[userId] = cartItems;
@@ -33,25 +47,39 @@ function CartComponent({ user }) {
       userOrderCarts[tempUserKey] = cartItems;
     }
 
+    //Sparar uppdaterad carts och usercarts tillbaka till localstorage
     localStorage.setItem("carts", JSON.stringify(carts));
     localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
-  }, [cartItems, userId]);
+  }, [cartItems, userId]); //Denna effekt körs när cartItems eller userId ändras
 
+
+  //Funktion för att hantera ändring av item kvantitet
   const handleQuantityChange = (index, newQuantity) => {
+
+    //Skapar en ny array med uppdaterad kvantitet för det specificerade itemet
     const updatedCartItems = cartItems.map((item, i) =>
       i === index ? { ...item, quantity: newQuantity } : item
     );
+
+    //Uppdaterar state med nya cart items array
     setCartItems(updatedCartItems);
   };
 
+
+  //Funktion för att ta bort item från cart
   const handleDeleteItem = (index) => {
+    //Skapar en ny array utan itemet
     const updatedCartItems = cartItems.filter((item, i) => i !== index);
+    //Uppdaterar state med det nya cart items array
     setCartItems(updatedCartItems);
 
+    //Hämtar carts och userOderCarts från local storage
     const carts = JSON.parse(localStorage.getItem("carts")) || {};
     const userOrderCarts =
       JSON.parse(localStorage.getItem("userOrderCarts")) || {};
 
+
+      //Uppdaterar de
     if (userId) {
       carts[userId] = updatedCartItems;
       userOrderCarts[userId] = updatedCartItems;
@@ -60,6 +88,7 @@ function CartComponent({ user }) {
       userOrderCarts[tempUserKey] = updatedCartItems;
     }
 
+    //Sparar uppdaterad cart och userordercarts i local storage
     localStorage.setItem("carts", JSON.stringify(carts));
     localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
   };
@@ -68,10 +97,14 @@ function CartComponent({ user }) {
     navigate("/checkoutpage");
   };
 
+
+  //Kalkylerar det totala priset i cart
   const totalPrice = cartItems
     .reduce((total, item) => total + item.price * item.quantity, 0)
     .toFixed(2);
 
+
+    //Kollar om cart är empty
   const isCartEmpty = cartItems.length === 0;
 
   return (
@@ -129,7 +162,7 @@ function CartComponent({ user }) {
             )}
             <PayButtonComp
               onClick={handlePayButtonClick}
-              disabled={isCartEmpty}
+              disabled={isCartEmpty} //Disablar button om cart är empty
             />
           </div>
         </div>

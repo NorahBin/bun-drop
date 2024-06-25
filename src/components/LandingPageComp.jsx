@@ -1,28 +1,39 @@
-import { FaArrowLeft } from "react-icons/fa";
 import { TbArrowBigRightFilled } from "react-icons/tb";
 import { TbArrowBigLeftFilled } from "react-icons/tb";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; //Importeras usestate hook från react
 import LandingPageCards from "./LandingPageCards";
-import menuData from "/menu.json"; // Assuming menu.json is in the same directory
-import stripes from "../images/stripes.png";
+import menuData from "/menu.json";
 import stripespng from "../images/stripespng.png";
 
 function LandingPageComponent() {
+
+  //State variabler för att hålla koll på start index och active index
   const [startIndex, setStartIndex] = useState(0);
   const [activeIndex, setActiveIndex] = useState(1); // Sätter start index till 1
 
+
+  //Hämtar alla items från json server och sätter 3 items per page
   const totalItems = menuData.mostPopular.length;
   const itemsPerPage = 3;
 
+  //Funktion för att hantera när användare klickar på next button
   const handleNextClick = () => {
+    //Kollar om start index plus itemsperpage är mindre än total ite,s
     if (startIndex + itemsPerPage < totalItems) {
+
+      //Om det är det, öka start indext med antalet objekt per sida
       setStartIndex((prevIndex) => prevIndex + itemsPerPage);
+
       setActiveIndex((prevIndex) => prevIndex + 1);
     }
   };
 
   const handlePreviousClick = () => {
+
+    //Minskar start index med 3 objekt per sida men låter det aldrig gå under 0
     setStartIndex((prevIndex) => Math.max(0, prevIndex - itemsPerPage));
+
+    //Minskar det aktiva indexet med 1 men låter det aldrig gå under 1.
     setActiveIndex((prevIndex) => Math.max(1, prevIndex - 1)); 
   };
 
@@ -61,7 +72,7 @@ function LandingPageComponent() {
             <div
               key={index}
               className={`image-circles circle ${
-                activeIndex === index + 1 ? "active" : ""
+                activeIndex === index + 1 ? "active" : "" // "" sätts om om condition är false, alltså ingen klass(fallback value)
               }`}
             ></div>
           )
