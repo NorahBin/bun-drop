@@ -94,6 +94,7 @@ body {
   border: 4px solid #d31d21;
   background-color: #fff797;
   color: #d31d21;
+  cursor: pointer;
 }
 
 .navlink {
@@ -1414,6 +1415,7 @@ body {
   background-color: #d31d21;
   border: none;
   padding-left: 2%;
+  cursor: pointer;
 }
 
 .menu-burger-button {
@@ -1422,6 +1424,8 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
+    cursor: pointer;
+
 }
 
 .menu-sides-button {
@@ -1430,6 +1434,8 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
+    cursor: pointer;
+
 }
 
 .menu-drink-button {
@@ -1438,6 +1444,8 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
+    cursor: pointer;
+
 }
 
 .menu-dessert-button {
@@ -1446,6 +1454,8 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
+    cursor: pointer;
+
 }
 
 .yellow-active {
@@ -1560,6 +1570,7 @@ body {
   border: 4px solid #d31d21;
   background-color: #fff797;
   color: #d31d21;
+  cursor: pointer;
 }
 
 .menu-text-title {
@@ -2734,6 +2745,7 @@ body {
   border: 4px solid #d31d21;
   background-color: #fff797;
   color: #d31d21;
+  cursor: pointer;
 }
 
 /* Media Query for iPads and Tablets (481px — 768px) */
@@ -5075,6 +5087,7 @@ body {
   border: 4px solid #d31d21;
   background-color: #fff797;
   color: #d31d21;
+  cursor: pointer;
 }
 
 .link {
