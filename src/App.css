@@ -515,7 +515,7 @@ body {
 .landing-page-red-line {
   background-color: #d31d21;
   width: 50%;
-  height: 1vh;
+  height: 0.8vh;
   border-radius: 20px;
 }
 
@@ -1400,12 +1400,11 @@ body {
 }
 
 .all-text {
-  margin-top: 0.5%;
   padding-left: 10px;
 }
 
 .burger-text {
-  margin-top: 0.5%;
+  margin-top: 0%;
 }
 
 .menu-all-button {
@@ -1431,7 +1430,6 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
-  margin-top: 10px;
 }
 
 .menu-drink-button {
@@ -1440,7 +1438,6 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
-  margin-top: 1%;
 }
 
 .menu-dessert-button {
@@ -1449,7 +1446,6 @@ body {
   color: white;
   background-color: #d31d21;
   border: none;
-  margin-top: 0.6%;
 }
 
 .yellow-active {
@@ -1476,7 +1472,6 @@ body {
 
 .drink-icon {
   font-size: 3vw;
-  margin-top: 0.5%;
 }
 
 .dessert-icon {
