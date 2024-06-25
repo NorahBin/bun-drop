@@ -515,7 +515,8 @@ body {
 .landing-page-red-line {
   background-color: #d31d21;
   width: 50%;
-  height: 1%;
+  height: 1vh;
+  border-radius: 20px;
 }
 
 /* Media Query  (481px — 768px) */
@@ -1487,11 +1488,23 @@ body {
   flex-wrap: wrap;
   display: flex;
   margin-top: 3rem;
-  gap: 20px;
+  gap: 48px;
   width: 90vw;
   padding-bottom: 30px;
   justify-content: center;
 }
+
+/* .menu-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  height: 71vh;
+  width: 60vh;
+  background-color: white;
+  border: #29c1db solid 8px;
+} */
 
 .menu-card {
   display: flex;
@@ -1503,6 +1516,7 @@ body {
   width: 60vh;
   background-color: white;
   border: #29c1db solid 8px;
+  position: relative;
 }
 
 /* Avnänds inte */
@@ -1588,6 +1602,39 @@ body {
   font-size: 1.5vw;
   font-family: "Black Han Sans";
 }
+
+.heart-button {
+  position: absolute; 
+  top: -20px; /* Adjust as needed */
+  right: -37px;
+  border: none;
+  border-radius: 10px;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid #d31d21;
+  background-color: #fff797;
+  font-size: 47px;
+  text-align: center;
+  font-family: "Black Han Sans";
+}
+
+.fa-heart {
+  color: #fff797;
+  stroke-width: 60px;
+  stroke: #d31d21;
+  margin-top: 10px;
+  width: 54px;
+}
+
+.fa-heart.favorite {
+  color: #d31d21;
+}
+
+
+
+
+
 
 .add-to-favorites-button:hover {
   border: 4px solid #d31d21;
@@ -1769,11 +1816,11 @@ body {
   border-radius: 10px;
   margin-right: 100px;
   height: 5vh;
-  width: 7.5vw;
+  width: 15vw;
   margin-top: 4%;
   background-color: #d31d21;
   color: #fff797;
-  font-size: 1.5vw;
+  font-size: 3vw;
   font-family: "Black Han Sans";
 }
 
@@ -1803,25 +1850,31 @@ body {
   font-weight: bold;
 }
 
-.add-to-favorites-button {
-  margin-left: 80px;
-  margin-bottom: 20px;
+.heart-button {
+  position: absolute; 
+  top: -20px; /* Adjust as needed */
+  right: -30px;
   border: none;
   border-radius: 10px;
-  margin-right: 100px;
-  height: 5vh;
-  width: 16vw;
-
-  margin-top: 4%;
-  background-color: #d31d21;
-  color: #fff797;
-  font-size: 1.5vw;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 5px solid #d31d21;
+  background-color: #fff797;
+  font-size: 47px;
+  text-align: center;
   font-family: "Black Han Sans";
 }
 
-.add-to-favorites-button:hover {
-  border: 4px solid #d31d21;
-  background-color: #fff797;
+.fa-heart {
+  color: #fff797;
+  stroke-width: 60px;
+  stroke: #d31d21;
+  margin-top: 10px;
+  width: 54px;
+}
+
+.fa-heart.favorite {
   color: #d31d21;
 }
 }
@@ -2180,7 +2233,8 @@ body {
   flex-wrap: wrap;
   display: flex;
   margin-top: 3rem;
-  gap: 20px;
+  /* gap: 20px; */
+  gap: 38px;
   width: 90vw;
   padding-bottom: 30px;
   justify-content: center;
@@ -2391,12 +2445,12 @@ body {
     margin-left: 80px;
     border: none;
     border-radius: 10px;
-    margin-right: 100px;
+    margin-right: 80px;
     height: 33px;
-    width: 102px;
+    width: 120px;
     background-color: #d31d21;
     color: #fff797;
-    font-size: 16px;
+    font-size: 23px;
     font-family: "Black Han Sans";
   }
 
@@ -2463,6 +2517,35 @@ body {
     font-size: 16px;
     font-family: "Black Han Sans";
   }
+
+  .heart-button {
+  position: absolute; 
+  top: -20px; /* Adjust as needed */
+  right: -10px;
+  border: none;
+  border-radius: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 5px solid #d31d21;
+  background-color: #fff797;
+  font-size: 33px;
+  font-family: "Black Han Sans";
+}
+
+.fa-heart {
+  color: #fff797;
+  stroke-width: 60px;
+  stroke: #d31d21;
+  margin-top: 6px;
+  width: 54px;
+  margin-left: -7px;
+
+}
+
+.fa-heart.favorite {
+  color: #d31d21;
+}
 }
 
 /* *-------------------------------------------* */
@@ -5269,7 +5352,7 @@ body {
 .favorite-red-line {
   background-color: #d31d21;
   width: 50%;
-  height: 1%;
+  height: 1vh;
   border-radius: 20px;
 }
 
