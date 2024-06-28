@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 function SignUpComponent() {
@@ -18,7 +17,6 @@ function SignUpComponent() {
 
   function handleSubmitForm(e) {
     e.preventDefault(); //prevents default form submission behaviour
-
 
     //Skapar ett postOptions objekt för ett POST request
     const postOptions = {
