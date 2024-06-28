@@ -17,9 +17,6 @@ function MenuCardsComponent() {
   }, []);
 
   return (
-
-    
-
     
     <div className="menu-card-container">
       {menuItems.map((item, index) => (
