@@ -19,8 +19,8 @@ function App() {
   const [user, setUser] = useState(null);
 
     useEffect(() => {
-
-      //Hämtar sparad user från local storage.
+        
+      //Hämtar  användar data för sparad user från local storage.
       const savedUser = localStorage.getItem("user");
       if (savedUser) {
         setUser(JSON.stringify(savedUser));
@@ -32,7 +32,7 @@ function App() {
       <Router>
         <>
           {/* //Passar username som en prop till navbar */}
-          {/* Sätter renderas inuti router så att den kan visas på alla sidor */}
+          {/*  renderas inuti router så att den kan visas på alla sidor */}
           <NavBar user={user} setUser={setUser} />
         </>
         <Routes>

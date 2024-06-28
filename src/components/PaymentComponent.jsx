@@ -59,12 +59,17 @@ function PaymentComponent({ user }) {
     setCvvError(false);
   };
 
-  //Funktion för att validera swish nummer
+  // Funktion för att validera swish nummer
   const validateSwishNumber = () => {
-    const isValidSwish = /^\d{10}$/.test(swishNumber);
-    setSwishError(!isValidSwish);
-    return isValidSwish;
+    if (/^\d{10}$/.test(swishNumber)) {
+      setSwishError(false);
+      return true;
+    } else {
+      setSwishError(true);
+      return false;
+    }
   };
+
 
   //Funktion för swish payment
   const handleSwishPayment = () => {
@@ -106,7 +111,6 @@ function PaymentComponent({ user }) {
 
   //Funktion för att hantera card payment
   const handlePayment = () => {
-
     let isValid = true;
 
     // Validate name, address, houseNumber, city
