@@ -51,7 +51,7 @@ function SignInComponent({ setUser }) {
     }
 
 
-    //Reset username och password fields efter form sumbission
+    //Reset inputs
     setUsername("");
     setPassword("");
   }

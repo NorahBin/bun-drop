@@ -12,7 +12,7 @@ function LandingPageComponent() {
   const [activeIndex, setActiveIndex] = useState(1); // Sätter start index till 1
 
 
-  //Hämtar alla items från json server och sätter 3 items per page
+  //Hämtar alla items fån mostpopular array och sätter 3 items per page
   const totalItems = menuData.mostPopular.length;
   const itemsPerPage = 3;
 
