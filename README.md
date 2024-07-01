@@ -3,11 +3,11 @@ To run this application:
 
 2. cd bun-drop
 
-3.npm install
+3. npm install
 
-4.npm install -g json-server
+4. npm install -g json-server
 
-5.json-server --watch menu.json
+5. json-server --watch menu.json
 
 6. npm run dev
 
