@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar({ user, setUser }) {
   const handleSignOut = () => {
-    // Set user to null to sign out
+    // Sätter user till null för att logga ut den
     setUser(null);
     localStorage.removeItem("user"); //tar bort userdata från local storage så att usersession försvinner(loggas ut)
   };
@@ -33,7 +33,7 @@ function NavBar({ user, setUser }) {
         >
           CART
         </NavLink>
-        {user && ( //Renderas endast om user finns
+        {user && ( //Renderas endast om user är inloggad
           <NavLink
             to="/favoritepage"
             className="navlink"

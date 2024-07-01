@@ -20,8 +20,8 @@ function MenuComponent({ user }) {
       .catch((error) => console.error("Error:", error));
   }, []); //Kommer endast köra en gång med en tom dependency arrat
 
-  // Hämtar favorites frpn local storage, eller använd en tomt objekt 
   useEffect(() => {
+    // Hämtar favorites frpn local storage, eller använd en tomt objekt
     const storedFavorites = JSON.parse(localStorage.getItem("favorites")) || {};
     setFavorites(storedFavorites); //Sätter hämtade favorites item i state
   }, []);
@@ -33,7 +33,6 @@ function MenuComponent({ user }) {
 
     //Gör en kopia av nuvarande favorites state
     let updatedFavorites = { ...favorites };
-
 
     //Om det inte finns en favorites lista för usern, skapa en top array
     if (!updatedFavorites[userId]) {
@@ -50,13 +49,12 @@ function MenuComponent({ user }) {
       updatedFavorites[userId] = updatedFavorites[userId].filter(
         (favoriteItem) => favoriteItem.id !== item.id
       );
-    } 
-    
-    //Annars lägg till
-    else { 
-      updatedFavorites[userId].push(item);
     }
 
+    //Annars lägg till
+    else {
+      updatedFavorites[userId].push(item);
+    }
 
     //Uppdatera favorites state med nya favorites
     setFavorites(updatedFavorites);
@@ -70,49 +68,49 @@ function MenuComponent({ user }) {
     setActiveButton(button);
   };
 
- const addToCart = (item) => {
-   //Hämtar user id.
-   const userId = user?.id;
+  const addToCart = (item) => {
+    //Hämtar user id.
+    const userId = user?.id;
 
-   //Hämtar existerande cart objekt från local storage och parsa det till ett javasvript objekt, eller skapa ett nytt objekt
-   let carts = JSON.parse(localStorage.getItem("carts")) || {};
+    //Hämtar existerande cart objekt från local storage och parsa det till ett javasvript objekt, eller skapa ett nytt objekt
+    let carts = JSON.parse(localStorage.getItem("carts")) || {};
 
-   //Cart key som ska användas antingen user id eller "tempuser"
-   const cartKey = userId || "tempUser";
+    //Cart key som ska användas antingen user id eller "tempuser"
+    const cartKey = userId || "tempUser";
 
-   //Hämta users cart från carts objeket, elelr skapa en ny empte array
-   let userCart = carts[cartKey] || [];
+    //Hämta users cart från carts objeket, elelr skapa en ny empte array
+    let userCart = carts[cartKey] || [];
 
-   //Hitta index på item:et i userns cart om det redan finns
-   const existingItemIndex = userCart.findIndex(
-     (cartItem) => cartItem.id === item.id
-   );
+    //Hitta index på item:et i userns cart om det redan finns
+    const existingItemIndex = userCart.findIndex(
+      (cartItem) => cartItem.id === item.id
+    );
 
-   //Om item:et redan finns, öka kvantiteten
-   if (existingItemIndex > -1) {
-     userCart[existingItemIndex].quantity += 1;
-   } else {
-     //Om det inte finns, lägg till kvantitenten 1
-     userCart.push({ ...item, quantity: 1 });
-   }
+    //Om item:et redan finns, öka kvantiteten
+    if (existingItemIndex > -1) {
+      userCart[existingItemIndex].quantity += 1;
+    } else {
+      //Om det inte finns, lägg till kvantitenten 1
+      userCart.push({ ...item, quantity: 1 });
+    }
 
-   //Uppdatera userns cart i carts objektet
-   carts[cartKey] = userCart;
+    //Uppdatera userns cart i carts objektet
+    carts[cartKey] = userCart;
 
-   //Spara det uppdaterade carts objektet til local storage, converterar det till en json string
-   localStorage.setItem("carts", JSON.stringify(carts));
+    //Spara det uppdaterade carts objektet til local storage, converterar det till en json string
+    localStorage.setItem("carts", JSON.stringify(carts));
 
-   // Update userOrderCart
-   let userOrderCarts =
-     JSON.parse(localStorage.getItem("userOrderCarts")) || {};
-   userOrderCarts[cartKey] = userCart;
-   localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
- };
+    // Update userOrderCart
+    let userOrderCarts =
+      JSON.parse(localStorage.getItem("userOrderCarts")) || {};
+    userOrderCarts[cartKey] = userCart;
+    localStorage.setItem("userOrderCarts", JSON.stringify(userOrderCarts));
+  };
 
- const filteredItems = menuItems.filter((item) => {
-   if (filter === "all") return true;
-   return item.category === filter;
- });
+  const filteredItems = menuItems.filter((item) => {
+    if (filter === "all") return true;
+    return item.category === filter;
+  });
 
   return (
     <>
@@ -216,4 +214,3 @@ function MenuComponent({ user }) {
 }
 
 export default MenuComponent;
-

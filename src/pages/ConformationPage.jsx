@@ -7,10 +7,3 @@ function ConformationPage({ user }) {
 
 export default ConformationPage;
 
-// import React from 'react';
-// import ConformationComponent from '../components/ConformationComponent';
-// function ConformationPage() {
-//     return ( <ConformationComponent/> );
-// }
-
-// export default ConformationPage;

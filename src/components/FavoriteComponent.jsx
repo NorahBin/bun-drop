@@ -5,20 +5,34 @@ import stripespng from "../images/stripespng.png";
 
 
 function FavoriteComponent({ userId }) {
+
+  //State variabel för att lagra favoriter
   const [favorites, setFavorites] = useState([]);
 
+  //Använder useffect för att uppdatera favoriter baserat på userId
   useEffect(() => {
+
+    //hämtar favoriter från localStorage eller skapar ett tomt objekt om det inte finns någon
     const allFavorites = JSON.parse(localStorage.getItem("favorites")) || {};
     setFavorites(allFavorites[userId] || []);
-  }, [userId]);
+  }, [userId]); //Körst varje gång userId ändras
 
+
+  //Funktion för att ta bort e ttfavorit item
   const handleRemove = (itemId) => {
+
+    //Hämtar alla favoriter från local storage
     const allFavorites = JSON.parse(localStorage.getItem("favorites")) || {};
+    //Hämtar favoriter för den inloggade användaren
     const userFavorites = allFavorites[userId] || [];
+
+    //Filtrerar bort favoriten som ska tas bort
     const updatedFavorites = userFavorites.filter((item) => item.id !== itemId);
 
+    //Upptadetar favoriter i localstorage
     allFavorites[userId] = updatedFavorites;
     localStorage.setItem("favorites", JSON.stringify(allFavorites));
+   //Uppdaterar state-variabeln med de nya favoriterna
     setFavorites(updatedFavorites);
   };
 
